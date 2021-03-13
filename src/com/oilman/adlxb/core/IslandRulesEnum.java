@@ -11,14 +11,10 @@ import static com.oilman.adlxb.core.IslandUtils.getARandomKaomoji;
  * NOTE: all English in keywords MUST be low case.
  * The second argument is a String array that stores responses if the input has the given keywords
  * <p>
- * Basic format:
- * name_for_the_rule(new String[]{""}, new String[]{""})
  * For the content in the rule, please use Chinese notation as much as possible,
  * because English is used in programing and may cause errors.
  * Please use English, Pinyin, or Romaji for variables names.
- * You MUST NOT use Chinese or Japanese.
- * <p>
- * tips:
+ * You MUST NOT use Chinese or Japanese for variables names.
  *
  * @author oilman
  * @see IslandUtils
@@ -56,18 +52,18 @@ public enum IslandRulesEnum {
     default_responses(
             new String[]{""}, // always true
             new String[]{
-            "( ﾟ∀。)", "( ´_ゝ`)旦", "(|||ﾟДﾟ)", "(ﾟДﾟ≡ﾟДﾟ)",
-            "⊂彡☆))д`)", "(　^ω^)", "致", "摩多摩多", "hso( ´ρ`)",
-            "你把大伙叫出来就是为了这点事啊",
-            user_input_key, getARandomKaomoji()
-    }),
+                    "( ﾟ∀。)", "( ´_ゝ`)旦", "(|||ﾟДﾟ)", "(ﾟДﾟ≡ﾟДﾟ)",
+                    "⊂彡☆))д`)", "(　^ω^)", "致", "摩多摩多", "hso( ´ρ`)",
+                    "你把大伙叫出来就是为了这点事啊",
+                    user_input_key, getARandomKaomoji()
+            }),
 
     ////// A //////
 
     ac_fun(new String[]{"acfun"}, new String[]{""}),
 
-    ask_questions(new String[]{"&&,知道,？", "是什么？","&&,为什么,？"},
-            new String[]{"不知道", "虫族不要上岛", "祭品呢？","因为"+user_cookie_key}),
+    ask_questions(new String[]{"&&,知道,？", "是什么？", "&&,为什么,？"},
+            new String[]{"不知道", "虫族不要上岛", "祭品呢？", "因为" + user_cookie_key}),
 
     atm(new String[]{"atm", "延毕", "毕业论文", "岛主", "a主席", "momo"}, new String[]{
             "你完了，猴子*眼小", "好靓的饼干", "继续说，a哥很喜欢", "已清退", "清❤退❤退"
@@ -112,7 +108,7 @@ public enum IslandRulesEnum {
     }, new String[]{
             "守❤护❤最❤好❤的❤二❤次❤元", "呐呐呐呐呐", "小殇君不要⊂彡☆))д`)",
             "泻药，人在日本，刚下福岛", "纯度，太高了", "请问这里是福岛吗？", "嘻嘻",
-            "(●˙꒳˙●)","四兄弟去打猎：老大打虎，老三杀豹，老四砍狼\n\n\n老二刺猿"}),
+            "(●˙꒳˙●)", "四兄弟去打猎：老大打虎，老三杀豹，老四砍狼\n\n\n老二刺猿"}),
     ////// O //////
     out_dated(new String[]{"分享图片", "转自", "听说"}, new String[]{"你把大伙叫出来只是为了这点事啊.jpg"}),
     ////// P //////
@@ -125,21 +121,21 @@ public enum IslandRulesEnum {
             "UCCU σ`∀´)",
             "蛤蛤蛤蛤蛤 乐死我了σ`∀´)"}),
     ////// R //////
-    roll(new String[]{"roll","测一测"}, new String[]{
-            "r", to_repeat,"20",
-            "roll",to_repeat,"10"
+    roll(new String[]{"roll", "测一测"}, new String[]{
+            "r", to_repeat, "20",
+            "roll", to_repeat, "10"
     }),
     ////// S //////
     sage(new String[]{"sage"}, new String[]{"SAGE!", "如你所愿！SAGE吧", "世嘉！"}),
-    sexual_preference(new String[]{"喜欢", "我可以", "xp", "suki", "hso", "性癖","戳我"},
+    sexual_preference(new String[]{"喜欢", "我可以", "xp", "suki", "hso", "性癖", "戳我"},
             new String[]{"(つд⊂)hso", "人不能，至少不该", "兄啊！你的XP好鸡掰的怪啊！",
-                    "(〃∀〃)\n(つд⊂)\n来","虽然人的xp是自由的，但是我还是建议你看医生"}),
+                    "(〃∀〃)\n(つд⊂)\n来", "虽然人的xp是自由的，但是我还是建议你看医生"}),
     ////// T //////
     the_fifth_republic(new String[]{"阁下", "虫豸"}, new String[]{"Shack it！"}),
     ////// U //////
     ////// V //////
     ////// W //////
-    who_is(new String[]{"谁"}, new String[]{user_cookie_key, to_repeat, "10", "张驰","A T M !"}),
+    who_is(new String[]{"谁"}, new String[]{user_cookie_key, to_repeat, "10", "张驰", "A T M !"}),
     ////// X //////
 
     ////// Y //////
