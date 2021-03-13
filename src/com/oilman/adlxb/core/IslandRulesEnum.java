@@ -8,7 +8,7 @@ import static com.oilman.adlxb.core.IslandUtils.getARandomKaomoji;
  * The response rule of the program, aka 岛规(bushi)
  * <p>
  * The first argument is a String array that stores keywords.
- * NOTE: all English in keyword MUST be low case.
+ * NOTE: all English in keywords MUST be low case.
  * The second argument is a String array that stores responses if the input has the given keywords
  * <p>
  * Basic format:
