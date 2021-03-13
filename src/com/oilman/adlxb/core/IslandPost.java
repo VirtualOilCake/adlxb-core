@@ -2,7 +2,9 @@ package com.oilman.adlxb.core;
 
 import java.util.Date;
 
+import static com.oilman.adlxb.core.IslandConstants.postNumberIncreaseSpeed;
 import static com.oilman.adlxb.core.OwnerEnum.*;
+
 
 /**
  * Possible owners of a post
@@ -48,30 +50,33 @@ class UserPost extends IslandPost {
  * @since 2.0.0
  */
 public class IslandPost implements Comparable<IslandPost> {
-    private final int index; //Starts at 0
+    private final long postNumber;
     private final String cookie;
     private final String content;
     private final Date createdTime;
     private final OwnerEnum owner;
 
+    public static long basePostNumber = 35741657 + IslandUtils.random().nextInt(postNumberIncreaseSpeed);
+
     /**
      * the most complex constructor
      *
-     * @param index       index of this post
+     * @param postNumber  the "No." thing of this post
      * @param cookie      cookie of this post
      * @param content     content of this post
      * @param createdTime created time of this post
      * @param owner       owner of this post (USER or ROBOT)
      * @throws IllegalArgumentException when the cookie or content is null or blank
      */
-    public IslandPost(int index, String cookie, String content, Date createdTime, OwnerEnum owner) throws IllegalArgumentException {
+    public IslandPost(long postNumber, String cookie, String content, Date createdTime, OwnerEnum owner)
+            throws IllegalArgumentException {
         if (content == null || cookie == null) {
-            throw new IllegalArgumentException("Error: content or cookie is null");
+            throw new IllegalArgumentException("Error when creating the Post: content or cookie is null");
         }
         if (content.isBlank() || cookie.isBlank()) {
-            throw new IllegalArgumentException("Error: content or cookie is blank");
+            throw new IllegalArgumentException("Error when creating the Post: content or cookie is blank");
         }
-        this.index = index;
+        this.postNumber = postNumber;
         this.cookie = cookie;
         this.content = content;
         this.createdTime = createdTime;
@@ -93,18 +98,19 @@ public class IslandPost implements Comparable<IslandPost> {
      * @param owner   owner of the post (USER or ROBOT)
      */
     public IslandPost(String content, OwnerEnum owner) {
-        this(IslandUtils.random().nextInt(IslandConstants.responseIndexRange), content, owner);
+        this(basePostNumber, content, owner);
+        basePostNumber += IslandUtils.random().nextInt(postNumberIncreaseSpeed) + 1;
     }
 
     /**
      * Constructor with random cookie and specified index
      *
-     * @param index   index of this post
-     * @param content content in the post
-     * @param owner   owner of the post (USER or ROBOT)
+     * @param postNumber index of this post
+     * @param content    content in the post
+     * @param owner      owner of the post (USER or ROBOT)
      */
-    public IslandPost(int index, String content, OwnerEnum owner) {
-        this(index, IslandUtils.getANewCookie(), content, new Date(), owner);
+    public IslandPost(long postNumber, String content, OwnerEnum owner) {
+        this(postNumber, IslandUtils.getANewCookie(), content, new Date(), owner);
     }
 
 
@@ -123,7 +129,7 @@ public class IslandPost implements Comparable<IslandPost> {
      */
     @Override
     public String toString() {
-        return "Index: " + index +
+        return "No. " + postNumber +
                 " | Cookie: " + cookie +
                 " | Content: " + content +
                 " | Created Time: " + createdTime +
@@ -141,7 +147,7 @@ public class IslandPost implements Comparable<IslandPost> {
      */
     @Override
     public int compareTo(IslandPost o) {
-        return this.index - o.index;
+        return (int) (this.postNumber - o.postNumber);
     }
 
 
@@ -158,8 +164,8 @@ public class IslandPost implements Comparable<IslandPost> {
         return createdTime;
     }
 
-    public int getIndex() {
-        return index;
+    public long getPostNumber() {
+        return postNumber;
     }
 
     public OwnerEnum getOwner() {

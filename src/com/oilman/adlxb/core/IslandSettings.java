@@ -7,8 +7,8 @@ package com.oilman.adlxb.core;
  */
 public class IslandSettings {
     // do the program needs to log?
-    public static boolean toLog =true;
+    public static boolean toLog = true;
     // these two int are used for how many responses the user will get
-    public static int baseNumberForReplies = 10;
-    public static int numberForRepliesRange = 2;
+    public static int baseNumberForReplies = 3;
+    public static int numberForRepliesRange = 5; // add to base number
 }

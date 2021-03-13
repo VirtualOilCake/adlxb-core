@@ -6,6 +6,7 @@ import java.util.Random;
 import static com.oilman.adlxb.core.IslandConstants.*;
 import static com.oilman.adlxb.core.IslandSettings.toLog;
 
+
 /**
  * The class for utils
  *
@@ -64,24 +65,67 @@ public class IslandUtils {
      * @return an array of String of responses
      */
     public static String[] getResponse(String userInput, String userCookie) {
-        String formattedInputString = formatInputString(userInput);
+        if (toLog){
+            System.out.println("getResponse() is being called");
+        }
         String[] responses = new String[getResponseNumber()];
-        ArrayList<IslandRulesEnum> rulesSatisfied = new ArrayList<IslandRulesEnum>();
+        ArrayList<IslandRulesEnum> rulesSatisfied =
+                getAllSatisfiedRules(formatInputString(userInput)); // List for all satisfied rules
+        ArrayList<String> possibleResponses = getAllPossibleResponses(rulesSatisfied);
+        if (toLog) {
+            System.out.println("All Possible responses: " + possibleResponses);
+        }
+        // Cannot use "for each"
+        // Replace the keywords
+        for (int i = 0; i < responses.length; i++) {
+            responses[i] = possibleResponses.get(random().nextInt(possibleResponses.size()));
+            if (responses[i].contains(user_input_key)) {
+                responses[i] = responses[i].replace(user_input_key, userInput);
+            }
+            if (responses[i].contains(IslandConstants.user_cookie_key)) {
+                responses[i] = responses[i].replace(IslandConstants.user_cookie_key, userCookie);
+            }
+        }
+        return responses;
+    }
+
+    private static ArrayList<IslandRulesEnum> getAllSatisfiedRules(String formattedUserInput){
+        ArrayList<IslandRulesEnum> rulesSatisfied = new ArrayList<>();
         for (int currentRuleIndex = 0; currentRuleIndex < IslandRulesEnum.values().length; currentRuleIndex++) {
             for (String currentKeyword : IslandRulesEnum.values()[currentRuleIndex].getKeywords()) {
-                if (formattedInputString.contains(currentKeyword)) {
+                // for and logic
+                if (currentKeyword.startsWith("&&,")){
+                    String[] andLogicKeywords = currentKeyword.split(",");
+                    boolean hasAllKeys = true;
+                    for (int i = 1, andLogicKeywordsLength = andLogicKeywords.length; i < andLogicKeywordsLength; i++) {
+                        String key = andLogicKeywords[i];
+                        if (!formattedUserInput.contains(key)){
+                            hasAllKeys=false;
+                            break;
+                        }
+                    }
+                    if (hasAllKeys){
+                        rulesSatisfied.add(IslandRulesEnum.values()[currentRuleIndex]);
+                        break;
+                    }
+                }
+                // match the normal keywords
+                else if (formattedUserInput.contains(currentKeyword)) {
                     rulesSatisfied.add(IslandRulesEnum.values()[currentRuleIndex]);
                     break;
                 }
             }
         }
+        return rulesSatisfied;
+    }
 
-        ArrayList<String> possibleResponses = new ArrayList<>(); // the list for possible responses of the user input
-        for (IslandRulesEnum currentRule : rulesSatisfied) {
+    private static ArrayList<String> getAllPossibleResponses(ArrayList<IslandRulesEnum> satisfiedRules){
+        ArrayList<String> possibleResponses = new ArrayList<>();
+        for (IslandRulesEnum currentRule : satisfiedRules) {
             // Add all possible responses to possibleResponses list
             for (int indexInRule = 0; indexInRule < currentRule.getResponses().length; indexInRule++) {
                 // Repeat the response
-                if (responseRepeatKeyword.equals(currentRule.getResponses()[indexInRule])) {
+                if (to_repeat.equals(currentRule.getResponses()[indexInRule])) {
                     String responseToRepeat = currentRule.getResponses()[indexInRule - 1];
                     int timesToRepeat = Integer.parseInt(currentRule.getResponses()[indexInRule + 1]);
                     // print state
@@ -95,25 +139,18 @@ public class IslandUtils {
                 }
                 // The normal case
                 else {
-                    possibleResponses.add(currentRule.getResponses()[indexInRule]);
+                    if (!currentRule.getResponses()[indexInRule].isBlank()){
+                        possibleResponses.add(currentRule.getResponses()[indexInRule]);
+                    }
+                    else {
+                        if (toLog){
+                            System.err.println("Waring: There is at least one blank response in: "+currentRule);
+                        }
+                    }
                 }
             }
         }
-        if (toLog) {
-            System.out.println("All Possible responses: " + possibleResponses);
-        }
-        // Cannot use "for each"
-        // Replace the keywords
-        for (int i = 0; i < responses.length; i++) {
-            responses[i] = possibleResponses.get(random().nextInt(possibleResponses.size()));
-            if (responses[i].contains(userInputKeyword)) {
-                responses[i] = responses[i].replace(userInputKeyword, userInput);
-            }
-            if (responses[i].contains(userCookieKeyword)) {
-                responses[i] = responses[i].replace(userCookieKeyword, userCookie);
-            }
-        }
-        return responses;
+        return possibleResponses;
     }
 
 
@@ -122,6 +159,6 @@ public class IslandUtils {
      * @since 2.0.0
      */
     public static String getARandomKaomoji() {
-        return islandKaomojis[random().nextInt(islandKaomojis.length)];
+        return islandKaomoji[random().nextInt(islandKaomoji.length)];
     }
 }

@@ -99,8 +99,10 @@ public class IslandThread {
         output.append("\n--- Responses --- ");
         for (int i = 0; i < responses.length; i++) {
             IslandPost post = responses[i];
-            output.append("\n").append("<").append(i).append("> ")
-                    .append(post.getCookie()).append(": ").append(post.getContent());
+            output.append("\n").append("<").append(i).append("> cookie: ")
+                    .append(post.getCookie())
+                    .append(" | No.").append(post.getPostNumber()).append("\n")
+                    .append(post.getContent());
         }
         output.append("\nThread Condition: ").append(threadCondition);
         output.append("\nCreated Time: ").append(createdTime);
@@ -116,5 +118,9 @@ public class IslandThread {
                 ", threadCondition=" + threadCondition +
                 ", createdTime=" + createdTime +
                 '}';
+    }
+
+    public boolean isSage() {
+        return this.threadCondition == ThreadConditionEnum.SAGE;
     }
 }
