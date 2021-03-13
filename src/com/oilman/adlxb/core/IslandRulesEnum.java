@@ -100,7 +100,7 @@ public enum IslandRulesEnum {
             }),
     ////// K //////
     ////// L //////
-    loli_con(new String[]{"炼", "铜"}, new String[]{""}),
+    loli_con(new String[]{"炼", "铜"}, new String[]{"冶金专业不要上岛！"}),
     ////// M //////
     ////// N //////
     ni_ji_gen(new String[]{
