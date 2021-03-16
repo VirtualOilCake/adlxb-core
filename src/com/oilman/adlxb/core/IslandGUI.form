@@ -1,83 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.oilman.adlxb.core.IslandGUI">
-  <grid id="27dc6" binding="rootJPanel" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="10" left="10" bottom="10" right="10"/>
+  <grid id="27dc6" binding="rootJPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="103"/>
+      <xy x="20" y="20" width="514" height="356"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="cd6e1" binding="jPanel2" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
+      <splitpane id="26fef">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="c46a7" class="javax.swing.JTextField" binding="userInputTextField">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <margin top="2" left="6" bottom="2" right="6"/>
-              <toolTipText value="要PO些啥呢？"/>
-            </properties>
-          </component>
-          <component id="4130b" class="javax.swing.JButton" binding="sendButton" custom-create="true">
-            <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <doubleBuffered value="true"/>
-              <focusTraversalPolicyProvider value="false"/>
-              <label value="发送"/>
-              <margin top="2" left="10" bottom="2" right="10"/>
-              <text value="发送"/>
-              <toolTipText value="发送你的串吧"/>
-            </properties>
-          </component>
-          <component id="52c05" class="javax.swing.JLabel" binding="inputHintLabel">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font swing-font="Label.font"/>
-              <requestFocusEnabled value="false"/>
-              <text value="要PO些啥呢？"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
-      <scrollpane id="c558b" binding="scrollPane">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="300"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="400" height="800"/>
           </grid>
         </constraints>
         <properties>
-          <font name="Yu Gothic" style="1"/>
+          <orientation value="0"/>
         </properties>
         <border type="none"/>
         <children>
-          <component id="bf7ea" class="javax.swing.JTextPane" binding="outputTextPane">
-            <constraints/>
-            <properties>
-              <editable value="false"/>
-              <enabled value="true"/>
-              <minimumSize width="20" height="22"/>
-            </properties>
-          </component>
+          <grid id="cd6e1" binding="jPanel2" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="4130b" class="javax.swing.JButton" binding="sendButton" custom-create="true">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="2" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <doubleBuffered value="true"/>
+                  <focusTraversalPolicyProvider value="false"/>
+                  <label value="发送"/>
+                  <margin top="2" left="10" bottom="2" right="10"/>
+                  <text value="发送"/>
+                  <toolTipText value="发送你的串吧"/>
+                </properties>
+              </component>
+              <component id="5aa13" class="javax.swing.JComboBox" binding="comboBox1" custom-create="true" default-binding="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="( ﾟ∀。)"/>
+                    <item value="|∀ﾟ"/>
+                    <item value="(´ﾟДﾟ`)"/>
+                    <item value="(;´Д`)"/>
+                    <item value="(`･ω･)"/>
+                    <item value="(=ﾟωﾟ)="/>
+                    <item value="| ω・´)"/>
+                    <item value="|-` )"/>
+                    <item value="|д` )"/>
+                    <item value="|ー` )"/>
+                    <item value="|∀` )"/>
+                    <item value="(つд⊂)"/>
+                    <item value="(ﾟДﾟ≡ﾟДﾟ)"/>
+                    <item value="(^o^)ﾉ"/>
+                    <item value="(|||ﾟДﾟ)"/>
+                    <item value="( ﾟ∀ﾟ)"/>
+                    <item value="( ´∀`)"/>
+                    <item value="(*´∀`)"/>
+                    <item value="(*ﾟ∇ﾟ)"/>
+                    <item value="(*ﾟーﾟ)"/>
+                    <item value="( ﾟ 3ﾟ)"/>
+                    <item value="( ´ー`)"/>
+                    <item value="( ﾟ 3ﾟ)"/>
+                    <item value="( ・_ゝ・)"/>
+                    <item value="(*´д`)"/>
+                    <item value="(・ー・)"/>
+                    <item value="(・∀・)"/>
+                    <item value="(ゝ∀･)"/>
+                    <item value="(&quot;∀&quot;)"/>
+                    <item value="(*ﾟ∀ﾟ*)"/>
+                    <item value="( `д´)"/>
+                    <item value="(`ε´ )"/>
+                    <item value="(`ヮ´ )"/>
+                    <item value="σ`∀´)"/>
+                    <item value="ﾟ∀ﾟ)σ"/>
+                    <item value="ﾟ ∀ﾟ)ノ"/>
+                    <item value="(ﾟдﾟ)"/>
+                    <item value="(|||ﾟдﾟ)"/>
+                    <item value="( ﾟдﾟ)"/>
+                    <item value="Σ( ﾟдﾟ)"/>
+                    <item value="( ;ﾟдﾟ)"/>
+                    <item value="( д ) ﾟ ﾟ"/>
+                    <item value="( д)"/>
+                    <item value="((( ﾟдﾟ)))"/>
+                    <item value="( ` ・´)"/>
+                    <item value="( ´д`)"/>
+                    <item value="( -д-)"/>
+                    <item value="･ﾟ( ﾉд`ﾟ)"/>
+                    <item value="( TдT)"/>
+                    <item value="ヾ(´ωﾟ`)"/>
+                    <item value="(*´ω`*)"/>
+                    <item value="(・ω・)"/>
+                    <item value="( ´・ω)"/>
+                    <item value="(´・ω・`)"/>
+                    <item value="(`・ω・´)"/>
+                    <item value="( `_っ´)"/>
+                    <item value="( ´ρ`)"/>
+                    <item value="( ﾟωﾟ)"/>
+                    <item value="(oﾟωﾟo)"/>
+                    <item value="( ^ω^)"/>
+                    <item value="ヾ(´ε`ヾ)"/>
+                    <item value="(ノﾟ∀ﾟ)ノ"/>
+                    <item value="(σﾟдﾟ)σ"/>
+                    <item value="(σﾟ∀ﾟ)σ"/>
+                    <item value="|дﾟ )"/>
+                    <item value="ﾟ(つд`ﾟ)"/>
+                    <item value="⊂彡))д`)"/>
+                    <item value="⊂彡))д´)"/>
+                    <item value="⊂彡))∀`)"/>
+                    <item value="(´∀((ミつ"/>
+                  </model>
+                  <toolTipText value="颜文字"/>
+                </properties>
+              </component>
+              <scrollpane id="b32b9">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="e1c2c" class="javax.swing.JTextPane" binding="userInputTextPane">
+                    <constraints/>
+                    <properties>
+                      <opaque value="true"/>
+                      <text value="⊂彡))∀`)"/>
+                      <toolTipText value="输入一些东西吧"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="9425c" class="javax.swing.JTextPane" binding="要PO些啥呢TextPane" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <enabled value="true"/>
+                  <focusable value="false"/>
+                  <opaque value="false"/>
+                  <text value="要PO些啥呢？"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <scrollpane id="5a337">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="bf7ea" class="javax.swing.JTextPane" binding="outputTextPane">
+                <constraints/>
+                <properties>
+                  <editable value="false"/>
+                  <enabled value="true"/>
+                  <minimumSize width="20" height="22"/>
+                  <text value="⊂彡))∀`)"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
         </children>
-      </scrollpane>
-      <hspacer id="682d6">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
+      </splitpane>
     </children>
   </grid>
 </form>
