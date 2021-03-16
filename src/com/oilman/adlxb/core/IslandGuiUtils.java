@@ -6,14 +6,29 @@ import java.util.Locale;
 
 import static com.oilman.adlxb.core.IslandSettings.toLog;
 
+/**
+ * This is the invisible part for the GUI
+ *
+ * @author Oilman
+ * @since 2.1.0
+ */
 public class IslandGuiUtils {
+    /**
+     * To cheak if a given font exist
+     *
+     * @param fontName the font you want to find
+     * @return true if the given font exist, false otherwise.
+     * @since 2.1.0
+     */
     public static boolean hasFont(String fontName) {
         GraphicsEnvironment systemGraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
         String[] fonts = systemGraphicsEnvironment.getAvailableFontFamilyNames();
         for (String font : fonts) {
-            System.out.println(font);
+            //System.out.println(font);
             if (font.equals(fontName)) {
-                System.out.println(fontName + " is found!");
+                if (toLog) {
+                    System.out.println(fontName + " is found!");
+                }
                 return true;
             }
         }
@@ -26,8 +41,9 @@ public class IslandGuiUtils {
      * Source: http://www.jguru.com/faq/view.jsp?EID=340519
      *
      * @param font given font
+     * @since 2.1.0
      */
-    public static void setAllFontsTo(Font font) {
+    public static void setDefaultFontTo(Font font) {
         UIManager.put("Button.font", font);
         UIManager.put("ToggleButton.font", font);
         UIManager.put("RadioButton.font", font);
@@ -61,18 +77,37 @@ public class IslandGuiUtils {
         UIManager.put("Tree.font", font);
     }
 
-    public static Font getFont() {
-        int normalFontSize = 12;
+    /**
+     * Get a sans serif font
+     * This method is here thanks to the lack of Chinese support in Microsoft Windows!
+     *
+     * @param fontSize the font size
+     * @return a sans serif font
+     * @since 2.1.0
+     */
+    public static Font getFont(int fontSize) {
         if (System.getProperty("os.name").toLowerCase(Locale.ROOT).startsWith("windows")) {
             if (toLog) {
-                System.out.println("You are running Windows. Trying to use Microsoft YaHei");
+                System.out.println("You are running Windows. Trying to use Microsoft YaHei.");
             }
-            return new Font("Microsoft YaHei", Font.PLAIN, normalFontSize);
+            return new Font("Microsoft YaHei", Font.PLAIN, fontSize);
         } else {
             if (toLog) {
-                System.out.println("You are not running Windows. Using the SANS_SERIF font");
+                System.out.println("You are not running Windows. Using the SANS_SERIF font.");
             }
-            return new Font(Font.SANS_SERIF, Font.BOLD, normalFontSize);
+            return new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
         }
     }
+
+    /**
+     * call getFont(int fontSize) with 12
+     *
+     * @return a sans serif font with size 12
+     * @since 2.1.0
+     */
+    public static Font getFont() {
+        // Default font size is 12
+        return getFont(12);
+    }
+
 }
