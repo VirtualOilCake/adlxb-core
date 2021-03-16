@@ -34,9 +34,9 @@
             <properties>
               <doubleBuffered value="true"/>
               <focusTraversalPolicyProvider value="false"/>
-              <label value=" 发送！"/>
-              <margin top="6" left="10" bottom="6" right="10"/>
-              <text value=" 发送！"/>
+              <label value="发送"/>
+              <margin top="2" left="10" bottom="2" right="10"/>
+              <text value="发送"/>
               <toolTipText value="发送你的串吧"/>
             </properties>
           </component>
@@ -58,7 +58,9 @@
             <preferred-size width="-1" height="300"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <font name="Yu Gothic" style="1"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="bf7ea" class="javax.swing.JTextPane" binding="outputTextPane">
