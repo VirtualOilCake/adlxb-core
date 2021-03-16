@@ -1,4 +1,4 @@
-package com.oilman.adlxb.core;
+package com.oilman.adlxb.desktop;
 
 import javax.swing.*;
 import java.awt.*;

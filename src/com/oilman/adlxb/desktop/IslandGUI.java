@@ -1,4 +1,6 @@
-package com.oilman.adlxb.core;
+package com.oilman.adlxb.desktop;
+
+import com.oilman.adlxb.core.IslandThread;
 
 import javax.swing.*;
 import javax.swing.event.PopupMenuEvent;
@@ -6,11 +8,9 @@ import javax.swing.event.PopupMenuListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.util.Objects;
 
-import static com.oilman.adlxb.core.IslandGuiUtils.*;
+import static com.oilman.adlxb.desktop.IslandGuiUtils.*;
 import static com.oilman.adlxb.core.IslandSettings.toLog;
 
 /**
@@ -28,6 +28,7 @@ public class IslandGUI {
     private JComboBox comboBox1;
     private JTextPane userInputTextPane;
     private JTextPane 要PO些啥呢TextPane;
+    private JScrollPane outputScrollPane;
 
     static Font normalFont;
     static Font boldFont;
@@ -70,10 +71,10 @@ public class IslandGUI {
 
             @Override
             public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
-                if (toLog){
-                    System.out.println("Selected: "+Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
+                if (toLog) {
+                    System.out.println("Selected: " + Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
                 }
-                userInputTextPane.setText(userInputTextPane.getText()+
+                userInputTextPane.setText(userInputTextPane.getText() +
                         Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
             }
 
@@ -83,7 +84,7 @@ public class IslandGUI {
             }
         });
 
-        comboBox1.setFont(new Font(Font.SANS_SERIF,Font.PLAIN,12));
+        comboBox1.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
         sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -92,6 +93,8 @@ public class IslandGUI {
                 } else {
                     IslandThread thisThread = new IslandThread(userInputTextPane.getText());
                     outputTextPane.setText(thisThread.toString());
+
+                    outputTextPane.setEnabled(true);
                     userInputTextPane.setText("");
                 }
             }

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/adlxb_core_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/adlxb_core_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/adlxb-core/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adlxb-core/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/adlxb-core/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandGuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGuiUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -111,7 +113,20 @@
       <recent name="D:\Developments\Git\adlxb-core\src\com\oilman\adlxb\core" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IslandGUI">
+  <component name="RunManager" selected="Application.IslandGUI (1)">
+    <configuration name="IslandGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.oilman.adlxb.desktop.IslandGUI" />
+      <module name="adlxb-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oilman.adlxb.desktop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IslandGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.oilman.adlxb.core.IslandGUI" />
       <module name="adlxb-core" />
@@ -137,6 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IslandGUI (1)" />
         <item itemvalue="Application.IslandGUI" />
         <item itemvalue="Application.Main" />
       </list>
