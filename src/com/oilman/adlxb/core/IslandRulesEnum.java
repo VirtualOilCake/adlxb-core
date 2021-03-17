@@ -82,7 +82,7 @@ public enum IslandRulesEnum {
                     "钓鱼？(　^ω^)\n(　-ω-)累了，毁灭吧"
             }),
 
-    broken_records(new String[]{"复读"}, new String[]{user_input_key, to_repeat, "20"}),
+    broken_record(new String[]{"复读"}, new String[]{user_input_key, to_repeat, "20"}),
 
     ////// C //////
     ////// D //////
@@ -100,7 +100,7 @@ public enum IslandRulesEnum {
             }),
     ////// K //////
     ////// L //////
-    loli_con(new String[]{"炼", "铜"}, new String[]{"冶金专业不要上岛！"}),
+    lo_li_con(new String[]{"炼", "铜"}, new String[]{"冶金专业不要上岛！"}),
     ////// M //////
     ////// N //////
     ni_ji_gen(new String[]{
@@ -113,7 +113,7 @@ public enum IslandRulesEnum {
     out_dated(new String[]{"分享图片", "转自", "听说"}, new String[]{"你把大伙叫出来只是为了这点事啊.jpg"}),
     ////// P //////
     ////// Q //////
-    qi_qi_ha_er(new String[]{"今天我", "σ", "来蛤我", "( ´_ゝ`)", "( ・_ゝ・)",
+    qi_qi_ha_er(new String[]{"σ", "来蛤我", "( ´_ゝ`)", "( ・_ゝ・)",
             "我竟然", "不信邪", "(´ﾟДﾟ`)"}, new String[]{
             "(`ヮ´ )σ`∀´) ﾟ∀ﾟ)σ蛤蛤蛤",
             "･ﾟ( ﾉヮ´ )(`ヮ´ )σ`∀´) ﾟ∀ﾟ)σ",
@@ -135,7 +135,9 @@ public enum IslandRulesEnum {
     ////// U //////
     ////// V //////
     ////// W //////
-    who_is(new String[]{"谁"}, new String[]{user_cookie_key, to_repeat, "10", "张驰", "A T M !"}),
+    who_is(new String[]{"谁"}, new String[]{
+            user_cookie_key, to_repeat, "10",
+            "张驰", "A T M !"}),
     ////// X //////
 
     ////// Y //////
