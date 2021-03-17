@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="adlxb-core:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/adlxb_core_jar</output-path>
+    <root id="archive" name="adlxb-core.jar">
+      <element id="module-output" name="adlxb-core" />
+    </root>
+  </artifact>
+</component>
