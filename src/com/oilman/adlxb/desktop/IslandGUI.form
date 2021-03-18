@@ -34,10 +34,10 @@
                 <properties>
                   <doubleBuffered value="true"/>
                   <focusTraversalPolicyProvider value="false"/>
-                  <label resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="send"/>
+                  <label resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="send"/>
                   <margin top="2" left="10" bottom="2" right="10"/>
-                  <text resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="send"/>
-                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="send_hint"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="send"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="send_hint"/>
                 </properties>
               </component>
               <component id="5aa13" class="javax.swing.JComboBox" binding="kaomojiComboBox" custom-create="true">
@@ -117,7 +117,7 @@
                     <item value="⊂彡))∀`)"/>
                     <item value="(´∀((ミつ"/>
                   </model>
-                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="kaomoji"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="kaomoji"/>
                 </properties>
               </component>
               <scrollpane id="b32b9" binding="userInputScrollPane">
@@ -146,7 +146,7 @@
                   <enabled value="true"/>
                   <focusable value="false"/>
                   <opaque value="false"/>
-                  <text resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="what_do_you_want_to_post"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="what_do_you_want_to_post"/>
                 </properties>
               </component>
             </children>
@@ -167,8 +167,8 @@
                   <enabled value="false"/>
                   <margin top="3" left="3" bottom="3" right="3"/>
                   <minimumSize width="20" height="22"/>
-                  <text resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="this_is_the_thread"/>
-                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="this_is_the_thread"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="this_is_thread"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="this_is_the_thread"/>
                   <visible value="true"/>
                 </properties>
               </component>
