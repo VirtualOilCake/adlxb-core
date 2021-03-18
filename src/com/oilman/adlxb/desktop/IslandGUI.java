@@ -41,7 +41,6 @@ public class IslandGUI {
      * @param args IDK
      */
     public static void main(String[] args) {
-        System.out.println(hasFont("Noto Sans"));
         // To make the UI looks better
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());// Current system style

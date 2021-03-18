@@ -90,13 +90,19 @@ public class IslandGuiUtils {
             if (toLog) {
                 System.out.println("You are running Windows. Trying to use Microsoft YaHei.");
             }
-            return new Font("Microsoft YaHei", Font.PLAIN, fontSize);
+            if (hasFont("Microsoft YaHei")){
+                return new Font("Microsoft YaHei", Font.PLAIN, fontSize);
+            }else {
+                if (toLog){
+                    System.out.println("You do not have Microsoft YaHei installed on your system!");
+                }
+            }
         } else {
             if (toLog) {
                 System.out.println("You are not running Windows. Using the SANS_SERIF font.");
             }
-            return new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
         }
+        return new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
     }
 
     /**
