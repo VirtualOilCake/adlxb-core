@@ -66,6 +66,7 @@ public enum IslandRulesEnum {
             new String[]{"不知道", "虫族不要上岛", "祭品呢？", "因为" + user_cookie_key}),
 
     atm(new String[]{"atm", "延毕", "毕业论文", "岛主", "a主席", "momo"}, new String[]{
+            to_sage,
             "你完了，猴子*眼小", "好靓的饼干", "继续说，a哥很喜欢", "已清退", "清❤退❤退"
     }),
 
@@ -73,6 +74,7 @@ public enum IslandRulesEnum {
 
     bog(new String[]{"bili", "pili", "xili", "批站", "b站", "哔哩", "干杯", "( ゜- ゜)つロ", "ビリ"},
             new String[]{
+                    to_sage,
                     "守❤护❤最❤好❤的❤霹❤雳❤霹❤雳",
                     "钓鱼不可取", "哪里来的bog？", "……？",
                     "叔叔我啊，最讨厌Bog了！", "BOG不要上岛",
@@ -90,7 +92,7 @@ public enum IslandRulesEnum {
     ////// F //////
     funny(new String[]{"( ﾟ∀。)", "草", "艹"}, new String[]{"( ﾟ∀。)", to_repeat, "3", "草( ﾟ∀。)", "草", "( ﾟ∀。)？"}),
     ////// G //////
-    girl_friend(new String[]{"女友"}, new String[]{"线虫不要上岛", "晒妹SAGE！"}),
+    girl_friend(new String[]{"女友"}, new String[]{to_sage, "线虫不要上岛", "晒妹SAGE！"}),
     ////// H //////
     ////// I //////
     ////// J //////

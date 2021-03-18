@@ -24,7 +24,7 @@ public class IslandConstants {
     public final static int cookieLength = 7;
 
     // This should be 0-100. If the responses contains sage how many likely this thread will be saged.
-    public final static int chanceOfSage = 50;
+    public final static int chanceOfSage = 80;
 
     // This is the range for the index of the posts (not used for now)
     public final static int postNumberIncreaseSpeed = 500;
@@ -51,4 +51,5 @@ public class IslandConstants {
     public static final String user_input_key = "user_input_key_in_enum";
     public static final String user_cookie_key = "user_cookie_key_in_enum";
     public static final String to_repeat = "repeat_key_in_enum";
+    public static final String to_sage = "this_thread_may_sage";
 }

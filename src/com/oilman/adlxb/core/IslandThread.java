@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
+import static com.oilman.adlxb.core.IslandConstants.to_sage;
 import static com.oilman.adlxb.core.IslandSettings.toLog;
 
 
@@ -53,16 +54,19 @@ public class IslandThread {
         }
         boolean isSage = false;
         for (String responsesContent : responsesContents) {
-            responsesList.add(new BotPost(responsesContent));
-            if (responsesContent.toLowerCase().contains("sage")) {
+            // if is the sage key word
+            if (responsesContent.equals(to_sage)) {
                 if (IslandUtils.random().nextInt(101) <= IslandConstants.chanceOfSage) {
                     isSage = true;
                     if (toLog) {
-                        System.out.println("This thread sage due to the response: " + responsesContent);
+                        System.out.println("SAGE!");
                     }
                     break;
                 }
+            }else {
+                responsesList.add(new BotPost(responsesContent));
             }
+
         }
         if (isSage) {
             this.threadCondition = ThreadConditionEnum.SAGE;
