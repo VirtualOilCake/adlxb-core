@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="rootJPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="529" height="411"/>
+      <xy x="20" y="20" width="887" height="411"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -34,10 +34,10 @@
                 <properties>
                   <doubleBuffered value="true"/>
                   <focusTraversalPolicyProvider value="false"/>
-                  <label resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="send"/>
+                  <label value="发送"/>
                   <margin top="2" left="10" bottom="2" right="10"/>
-                  <text resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="send"/>
-                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="send_hint"/>
+                  <text value="发送"/>
+                  <toolTipText value="PO出去吧！"/>
                 </properties>
               </component>
               <component id="5aa13" class="javax.swing.JComboBox" binding="kaomojiComboBox" custom-create="true">
@@ -117,7 +117,7 @@
                     <item value="⊂彡))∀`)"/>
                     <item value="(´∀((ミつ"/>
                   </model>
-                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="kaomoji"/>
+                  <toolTipText value="颜文字"/>
                 </properties>
               </component>
               <scrollpane id="b32b9" binding="userInputScrollPane">
@@ -146,7 +146,7 @@
                   <enabled value="true"/>
                   <focusable value="false"/>
                   <opaque value="false"/>
-                  <text resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="what_do_you_want_to_post"/>
+                  <text value="要PO些啥呢？"/>
                 </properties>
               </component>
             </children>
@@ -167,8 +167,8 @@
                   <enabled value="false"/>
                   <margin top="3" left="3" bottom="3" right="3"/>
                   <minimumSize width="20" height="22"/>
-                  <text resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="this_is_thread"/>
-                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiTextResource" key="this_is_the_thread"/>
+                  <text value="这里会显示串"/>
+                  <toolTipText value="这是串"/>
                   <visible value="true"/>
                 </properties>
               </component>
