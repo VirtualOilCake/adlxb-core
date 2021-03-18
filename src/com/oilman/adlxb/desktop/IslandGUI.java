@@ -25,10 +25,12 @@ public class IslandGUI {
     private JPanel jPanel2;
     private JPanel rootJPanel;
     private JTextPane outputTextPane;
-    private JComboBox comboBox1;
+    private JComboBox kaomojiComboBox;
     private JTextPane userInputTextPane;
-    private JTextPane 要PO些啥呢TextPane;
+    private JTextPane HintTextPane;
     private JScrollPane outputScrollPane;
+    private JScrollPane userInputScrollPane;
+    private JSplitPane mainSplitPane;
 
     static Font normalFont;
     static Font boldFont;
@@ -61,29 +63,34 @@ public class IslandGUI {
 
     private void createUIComponents() {
         sendButton = new JButton();
-        comboBox1 = new JComboBox();
-        comboBox1.addPopupMenuListener(new PopupMenuListener() {
+        kaomojiComboBox = new JComboBox();
+        kaomojiComboBox.addPopupMenuListener(new PopupMenuListener() {
+            boolean isCanceled=false;
             @Override
             public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
-                //Do nothing
+                isCanceled=false;
             }
 
             @Override
             public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
-                if (toLog) {
-                    System.out.println("Selected: " + Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
+                if (!isCanceled){
+                    if (toLog) {
+                        System.out.println("Selected: " + Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
+                    }
+                    userInputTextPane.setText(userInputTextPane.getText() +
+                            Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
+                }else {
+                    isCanceled=false;
                 }
-                userInputTextPane.setText(userInputTextPane.getText() +
-                        Objects.requireNonNull(comboBox1.getSelectedItem()).toString());
             }
 
             @Override
             public void popupMenuCanceled(PopupMenuEvent e) {
-                //Do nothing
+                isCanceled=true;
             }
         });
 
-        comboBox1.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
+        kaomojiComboBox.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
         sendButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

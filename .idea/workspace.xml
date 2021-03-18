@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/gui_resource.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandRulesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandRulesEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,5 +131,16 @@
       <updated>1615465613875</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -68,6 +68,7 @@ public class IslandThread {
             }
 
         }
+        // check the sage condition
         if (isSage) {
             this.threadCondition = ThreadConditionEnum.SAGE;
         } else {

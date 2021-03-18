@@ -27,8 +27,6 @@ public enum IslandRulesEnum {
      * You can use methods in other classes,
      * because this is technically another class.
      * <p>
-     * If your response has "sage" (not case sensitive) in it,
-     * there is a chance that this thread will get sage.
      * If you want to activate your rule only when more than one keywords applied,
      * you may want to use "and" logic!
      * The syntax goes like: "&&,keyword 1,keyword 2,keyword 3"
@@ -43,8 +41,10 @@ public enum IslandRulesEnum {
      * // This is the user's cookie
      * IslandUtils.getARandomKaomoji()
      * // This will give you a random Kaomoji (of cause comes from A Island)
-     * IslandConstants.toRepeat
+     * IslandConstants.to_repeat
      * // The syntax of this: "你想要复读或者增加权重的话", to_repeat, "233"
+     * IslandConstants.to_sage
+     * // The thread may be sage, possibility see IslandConstants.chanceOfSage
      * <p>
      * Basic format:
      * name_of_the_rule(new String[]{""}, new String[]{""}),
@@ -62,7 +62,7 @@ public enum IslandRulesEnum {
 
     ac_fun(new String[]{"acfun"}, new String[]{""}),
 
-    ask_questions(new String[]{"&&,知道,？", "是什么？", "&&,为什么,？"},
+    ask_questions(new String[]{"&&,知道,？", "是什么？", "为什么"},
             new String[]{"不知道", "虫族不要上岛", "祭品呢？", "因为" + user_cookie_key}),
 
     atm(new String[]{"atm", "延毕", "毕业论文", "岛主", "a主席", "momo"}, new String[]{
@@ -108,6 +108,7 @@ public enum IslandRulesEnum {
     ni_ji_gen(new String[]{
             "二次元", "呐", "米娜桑", "啊诺", "！？", "？！", "动漫", "三次元", "(｡◕∀◕｡)", "☆", "の"
     }, new String[]{
+            to_sage,
             "守❤护❤最❤好❤的❤二❤次❤元", "呐呐呐呐呐", "小殇君不要⊂彡☆))д`)",
             "泻药，人在日本，刚下福岛", "纯度，太高了", "请问这里是福岛吗？", "嘻嘻",
             "(●˙꒳˙●)", "四兄弟去打猎：老大打虎，老三杀豹，老四砍狼\n\n\n老二刺猿"}),
@@ -128,7 +129,7 @@ public enum IslandRulesEnum {
             "roll", to_repeat, "10"
     }),
     ////// S //////
-    sage(new String[]{"sage"}, new String[]{"SAGE!", "如你所愿！SAGE吧", "世嘉！"}),
+    sage(new String[]{"sage"}, new String[]{to_sage, "SAGE!", "如你所愿！SAGE吧", "世嘉！"}),
     sexual_preference(new String[]{"喜欢", "我可以", "xp", "suki", "hso", "性癖", "戳我"},
             new String[]{"(つд⊂)hso", "人不能，至少不该", "兄啊！你的XP好鸡掰的怪啊！",
                     "(〃∀〃)\n(つд⊂)\n来", "虽然人的xp是自由的，但是我还是建议你看医生"}),

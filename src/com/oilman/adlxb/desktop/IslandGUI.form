@@ -8,9 +8,9 @@
     <properties/>
     <border type="none"/>
     <children>
-      <splitpane id="26fef">
+      <splitpane id="26fef" binding="mainSplitPane">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="400" height="400"/>
           </grid>
         </constraints>
@@ -34,13 +34,13 @@
                 <properties>
                   <doubleBuffered value="true"/>
                   <focusTraversalPolicyProvider value="false"/>
-                  <label value="发送"/>
+                  <label resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="send"/>
                   <margin top="2" left="10" bottom="2" right="10"/>
-                  <text value="发送"/>
-                  <toolTipText value="发送你的串吧"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="send"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="send_hint"/>
                 </properties>
               </component>
-              <component id="5aa13" class="javax.swing.JComboBox" binding="comboBox1" custom-create="true" default-binding="true">
+              <component id="5aa13" class="javax.swing.JComboBox" binding="kaomojiComboBox" custom-create="true">
                 <constraints>
                   <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -117,10 +117,10 @@
                     <item value="⊂彡))∀`)"/>
                     <item value="(´∀((ミつ"/>
                   </model>
-                  <toolTipText value="颜文字"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="kaomoji"/>
                 </properties>
               </component>
-              <scrollpane id="b32b9">
+              <scrollpane id="b32b9" binding="userInputScrollPane">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -137,7 +137,7 @@
                   </component>
                 </children>
               </scrollpane>
-              <component id="9425c" class="javax.swing.JTextPane" binding="要PO些啥呢TextPane" default-binding="true">
+              <component id="9425c" class="javax.swing.JTextPane" binding="HintTextPane">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -146,7 +146,7 @@
                   <enabled value="true"/>
                   <focusable value="false"/>
                   <opaque value="false"/>
-                  <text value="要PO些啥呢？"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="what_do_you_want_to_post"/>
                 </properties>
               </component>
             </children>
@@ -167,8 +167,8 @@
                   <enabled value="false"/>
                   <margin top="3" left="3" bottom="3" right="3"/>
                   <minimumSize width="20" height="22"/>
-                  <text value="这里是串"/>
-                  <toolTipText value="这里是串"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="this_is_the_thread"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/gui_resource" key="this_is_the_thread"/>
                   <visible value="true"/>
                 </properties>
               </component>
