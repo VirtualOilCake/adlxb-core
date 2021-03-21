@@ -2,13 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/GuiTexts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiTextResource.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/androidTest/java/com/oilman/adlxb/android/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/java/com/oilman/adlxb/android/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/test/java/com/oilman/adlxb/android/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ADLXB/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/gui_resource.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adlxb-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/adlxb-core.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,5 +179,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
