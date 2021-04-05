@@ -37,6 +37,8 @@ public class IslandGUI {
     private JScrollPane userInputScrollPane;
     private JSplitPane mainSplitPane;
 
+    static ResourceBundle bundle;
+
     /**
      * Main GUI for users
      *
@@ -53,21 +55,25 @@ public class IslandGUI {
         }
         setDefaultFontTo(getFont());
 
+        Locale locale = Locale.getDefault();
+        bundle = ResourceBundle.getBundle("com.oilman.adlxb.desktop.guiString",locale);
+
         JFrame frame = new JFrame();
         frame.setContentPane(new IslandGUI().rootJPanel);
+        frame.setTitle(bundle.getString("title"));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
 
     private void createUIComponents() {
-        Locale locale = Locale.getDefault();
-        ResourceBundle bundle = ResourceBundle.getBundle("com.oilman.adlxb.desktop.guiString",locale);
 
         sendButton = new JButton();
         kaomojiComboBox = new JComboBox<String>();
         userInputTextPane = new JTextPane();
         outputTextPane = new JTextPane();
+
+
         userInputTextPane.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
         outputTextPane.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
 
