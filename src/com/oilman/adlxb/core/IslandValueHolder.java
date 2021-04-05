@@ -1,5 +1,10 @@
 package com.oilman.adlxb.core;
 
+public class IslandValueHolder {
+    public static void setToLog(boolean b){
+        CoreVariables.toLog=b;
+    }
+}
 /**
  * Most of the constants of this program should go here
  *
@@ -7,7 +12,7 @@ package com.oilman.adlxb.core;
  * @author Sod-Momas
  * @since 1.0.1
  */
-public class IslandConstants {
+class CoreConstants {
     // possible content in the cookie
     public final static char[] cookieContents = {
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
@@ -46,4 +51,17 @@ public class IslandConstants {
 
     private void IslandSettings() {
     }//private constructor
+}
+/**
+ * A class that stores values that will change while using the program
+ * This class should be able to change and don't have final
+ * If you want to have a constance that is not visible for users, you should go to IslandValueHolder class
+ */
+class CoreVariables {
+    // do the program needs to log?
+    public static boolean toLog = true;
+    // these two int are used for how many responses the user will get
+    public static int baseNumberForReplies = 5;
+    public static int numberForRepliesRange = 5; // add to base number
+
 }

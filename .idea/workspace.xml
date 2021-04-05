@@ -2,43 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ADLXB/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/androidTest/java/com/oilman/adlxb/android/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/java/com/oilman/adlxb/android/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/app/src/test/java/com/oilman/adlxb/android/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ADLXB/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/GuiVariables.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adlxb-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/adlxb-core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/adlxb-core/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/adlxb-core/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandValueHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandRulesEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandRulesEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGuiUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/IslandTerminalProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/IslandTerminalProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +103,7 @@
       <recent name="D:\Developments\Git\adlxb-core\src\com\oilman\adlxb\core" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IslandGUI">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="IslandGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.oilman.adlxb.desktop.IslandGUI" />
       <module name="adlxb-core" />
@@ -153,8 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IslandGUI" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.IslandGUI" />
       </list>
     </recent_temporary>
   </component>

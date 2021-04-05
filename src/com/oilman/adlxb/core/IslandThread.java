@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-import static com.oilman.adlxb.core.IslandConstants.to_sage;
-import static com.oilman.adlxb.core.IslandSettings.toLog;
+import static com.oilman.adlxb.core.CoreConstants.*;
+import static com.oilman.adlxb.core.CoreVariables.toLog;
 
 
 /**
@@ -56,7 +56,7 @@ public class IslandThread {
         for (String responsesContent : responsesContents) {
             // if is the sage key word
             if (responsesContent.equals(to_sage)) {
-                if (IslandUtils.random().nextInt(101) <= IslandConstants.chanceOfSage) {
+                if (IslandUtils.random().nextInt(101) <= chanceOfSage) {
                     isSage = true;
                     if (toLog) {
                         System.out.println("SAGE!");
@@ -98,7 +98,7 @@ public class IslandThread {
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder();
-        output.append("\n==== Island Thread ====\n");
+        output.append("==== Island Thread ====\n");
         output.append("--- User Post --- \n");
         output.append(userPost.getCookie()).append(": ").append(userPost.getContent());
         output.append("\n--- Responses --- ");

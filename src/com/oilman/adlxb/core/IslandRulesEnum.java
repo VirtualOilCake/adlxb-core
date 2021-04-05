@@ -1,7 +1,7 @@
 package com.oilman.adlxb.core;
 
 
-import static com.oilman.adlxb.core.IslandConstants.*;
+import static com.oilman.adlxb.core.CoreConstants.*;
 import static com.oilman.adlxb.core.IslandUtils.getARandomKaomoji;
 
 /**
@@ -18,7 +18,7 @@ import static com.oilman.adlxb.core.IslandUtils.getARandomKaomoji;
  *
  * @author oilman
  * @see IslandUtils
- * @see IslandConstants
+ * @see IslandValueHolder
  * @since 2.0.0
  */
 // TODO create more rules
@@ -34,17 +34,17 @@ public enum IslandRulesEnum {
      * (in this case, your rule will be applied
      * only if the input has all of keyword 1, keyword 2, and keyword 3)
      * <p>
-     * Method or Constants you may want to use:
-     * IslandConstants.user_input_key
+     * Method or CoreConstants you may want to use:
+     * IslandValueHolder.user_input_key
      * // This is the content of the original user input
-     * IslandConstants.user_cookie_key
+     * IslandValueHolder.user_cookie_key
      * // This is the user's cookie
      * IslandUtils.getARandomKaomoji()
      * // This will give you a random Kaomoji (of cause comes from A Island)
-     * IslandConstants.to_repeat
+     * IslandValueHolder.to_repeat
      * // The syntax of this: "你想要复读或者增加权重的话", to_repeat, "233"
-     * IslandConstants.to_sage
-     * // The thread may be sage, possibility see IslandConstants.chanceOfSage
+     * IslandValueHolder.to_sage
+     * // The thread may be sage, possibility see IslandValueHolder.chanceOfSage
      * <p>
      * Basic format:
      * name_of_the_rule(new String[]{""}, new String[]{""}),

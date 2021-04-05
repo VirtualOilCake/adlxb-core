@@ -3,8 +3,8 @@ package com.oilman.adlxb.core;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static com.oilman.adlxb.core.IslandConstants.*;
-import static com.oilman.adlxb.core.IslandSettings.toLog;
+import static com.oilman.adlxb.core.CoreConstants.*;
+import static com.oilman.adlxb.core.CoreVariables.*;
 
 
 /**
@@ -54,8 +54,8 @@ public class IslandUtils {
      * @return base number + a random number between 0 and range
      */
     private static int getResponseNumber() {
-        return IslandSettings.baseNumberForReplies +
-            IslandUtils.random().nextInt(IslandSettings.numberForRepliesRange);
+        return baseNumberForReplies +
+            IslandUtils.random().nextInt(numberForRepliesRange);
     }
 
     /**
@@ -82,8 +82,8 @@ public class IslandUtils {
             if (responses[i].contains(user_input_key)) {
                 responses[i] = responses[i].replace(user_input_key, userInput);
             }
-            if (responses[i].contains(IslandConstants.user_cookie_key)) {
-                responses[i] = responses[i].replace(IslandConstants.user_cookie_key, userCookie);
+            if (responses[i].contains(user_cookie_key)) {
+                responses[i] = responses[i].replace(user_cookie_key, userCookie);
             }
         }
         return responses;

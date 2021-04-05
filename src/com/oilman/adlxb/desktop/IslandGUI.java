@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
 
-import static com.oilman.adlxb.core.IslandSettings.toLog;
+import static com.oilman.adlxb.desktop.GuiVariables.toLog;
 import static com.oilman.adlxb.desktop.IslandGuiUtils.getFont;
 import static com.oilman.adlxb.desktop.IslandGuiUtils.setDefaultFontTo;
 

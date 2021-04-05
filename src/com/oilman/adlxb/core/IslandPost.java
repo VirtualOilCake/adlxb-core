@@ -2,7 +2,7 @@ package com.oilman.adlxb.core;
 
 import java.util.Date;
 
-import static com.oilman.adlxb.core.IslandConstants.postNumberIncreaseSpeed;
+import static com.oilman.adlxb.core.CoreConstants.postNumberIncreaseSpeed;
 import static com.oilman.adlxb.core.OwnerEnum.*;
 
 

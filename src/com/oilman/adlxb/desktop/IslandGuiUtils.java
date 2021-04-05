@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Locale;
 
-import static com.oilman.adlxb.core.IslandSettings.toLog;
+import static com.oilman.adlxb.desktop.GuiVariables.toLog;
+
 
 /**
  * This is the invisible part for the GUI

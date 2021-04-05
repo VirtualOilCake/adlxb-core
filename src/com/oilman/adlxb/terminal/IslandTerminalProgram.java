@@ -1,6 +1,7 @@
 package com.oilman.adlxb.terminal;
 
 import com.oilman.adlxb.core.IslandThread;
+import com.oilman.adlxb.core.IslandValueHolder;
 
 import java.util.Scanner;
 
@@ -11,7 +12,18 @@ import java.util.Scanner;
  * @since 1.0.0
  */
 public class IslandTerminalProgram {
+    public static void main(String[] args) {
+        run();
+    }
+
+    /**
+     * The main terminal program
+     *
+     * @since 0.0.1
+     */
     public static void run() {
+        IslandValueHolder.setToLog(false);
+
         Scanner userInputStringScanner = new Scanner(System.in);
         System.out.print("要PO些啥呢：");
         if (userInputStringScanner.hasNextLine()) {
