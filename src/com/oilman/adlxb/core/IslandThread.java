@@ -143,16 +143,53 @@ public class IslandThread {
             '}';
     }
 
+
+    /**
+     * Return a String representative of the responses for this thread.
+     *
+     * @return a String representative of the responses for this thread.
+     * @version 3.0.0
+     * @since 3.0.0
+     */
     public String responsesToString() {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < responses.length; i++) {
             IslandPost post = responses[i];
-            output.append("\n").append("[").append(i).append("] cookie: ")
+            if (i!=0){
+                output.append("\n");//The first one will have no new line
+            }
+            output.append("[").append(i).append("] cookie: ")
                 .append(post.getCookie())
                 .append(" | No.").append(post.getPostNumber()).append("\n")
                 .append(post.getContent());
         }
+        if (responses.length==0){
+            output.append("There is no response...");
+        }
         return output.toString();
+    }
+
+    public String selfPostToString() {
+        return "cookie: " +
+            userPost.getCookie() +
+            " | No." + userPost.getPostNumber() + "\n" +
+            userPost.getContent();
+    }
+
+    public IslandPost getUserPost() {
+        return userPost;
+    }
+
+    public IslandPost[] getResponses() {
+        return responses;
+    }
+
+    public ThreadConditionEnum getThreadCondition() {
+        return threadCondition;
+    }
+
+    public Date getCreatedTime() {
+        return createdTime;
     }
 
     public boolean isSage() {

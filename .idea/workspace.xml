@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/IslandTerminalProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/IslandTerminalProgram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,7 @@
       <recent name="D:\Developments\Git\adlxb-core\src\com\oilman\adlxb\core" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IslandTester">
+  <component name="RunManager" selected="Application.IslandGUI">
     <configuration name="IslandGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.oilman.adlxb.desktop.IslandGUI" />
       <module name="adlxb-core" />
@@ -154,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IslandTester" />
         <item itemvalue="Application.IslandGUI" />
         <item itemvalue="Application.IslandTerminalProgram" />
+        <item itemvalue="Application.IslandTester" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

@@ -13,6 +13,11 @@ import java.util.Scanner;
  * @since 1.0.0
  */
 public class IslandTerminalProgram {
+    /**
+     * Main method to start the program
+     *
+     * @param args idk
+     */
     public static void main(String[] args) {
         run();
     }
@@ -20,6 +25,7 @@ public class IslandTerminalProgram {
     /**
      * The main terminal program
      *
+     * @version 3.0.0
      * @since 0.0.1
      */
     public static void run() {
@@ -30,13 +36,30 @@ public class IslandTerminalProgram {
         if (userInputStringScanner.hasNextLine()) {
             String userInput = userInputStringScanner.nextLine();
             try {
+                IslandThread thisTread = new IslandThread(userInput);
                 printALotOfNewLines();
                 System.out.print("\u001b[1m" + "\u001b[36m");//Bold+Cyan
-                System.out.println("============= 串内容 ==============");
-                System.out.print("\u001b[0m");//Reset
-                printThread(userInput);
+                System.out.println("================ 串 =================");
+                System.out.print("\u001b[0m");//Reset;
+                System.out.println("创建时间：" + thisTread.getCreatedTime());
+                System.out.print("当前状态：");
+                if (thisTread.isSage()) {
+                    System.out.print("\u001b[31m");//Print red
+                    System.out.println("被SAGE啦！");
+                    System.out.print("\u001b[0m");//Reset
+                } else {
+                    System.out.println("正常");
+                }
                 System.out.print("\u001b[1m" + "\u001b[36m");//Bold+Cyan
-                System.out.println("==================================");
+                System.out.println("------------- 用户输入 ---------------");
+                System.out.print("\u001b[0m");//Reset
+                System.out.println(thisTread.selfPostToString());
+                System.out.print("\u001b[1m" + "\u001b[36m");//Bold+Cyan
+                System.out.println("--------------- 回复 ----------------");
+                System.out.print("\u001b[0m");//Reset
+                System.out.println(thisTread.responsesToString());
+                System.out.print("\u001b[1m" + "\u001b[36m");//Bold+Cyan
+                System.out.println("====================================");
                 System.out.print("\u001b[0m");//Reset
 
             } catch (IllegalArgumentException illegalArgumentException) {
@@ -52,6 +75,14 @@ public class IslandTerminalProgram {
         }
     }
 
+    /**
+     * This was used for printing the thread.
+     * It is obsolete now.
+     *
+     * @param userInput a String that user inputted.
+     * @version 1.1.0
+     * @since 1.1.0
+     */
     private static void printThread(String userInput) {
 
         IslandThread threadToPrint = new IslandThread(userInput);
@@ -64,6 +95,12 @@ public class IslandTerminalProgram {
 
     }
 
+    /**
+     * Print a lot of lines
+     *
+     * @version 3.0.0
+     * @since 3.0.0
+     */
     private static void printALotOfNewLines() {
         for (int i = 0; i < 50; i++) {
             System.out.println();
