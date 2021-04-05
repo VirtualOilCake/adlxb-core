@@ -4,6 +4,9 @@ public class IslandValueHolder {
     public static void setToLog(boolean b){
         CoreVariables.toLog=b;
     }
+    public static String[] getKaomoji(){
+        return CoreConstants.islandKaomoji;
+    }
 }
 /**
  * Most of the constants of this program should go here

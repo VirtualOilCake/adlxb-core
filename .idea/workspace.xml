@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiString.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandValueHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandValueHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiTextResource.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiString.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiString.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +89,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -149,5 +149,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

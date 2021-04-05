@@ -34,10 +34,10 @@
                 <properties>
                   <doubleBuffered value="true"/>
                   <focusTraversalPolicyProvider value="false"/>
-                  <label value="发送"/>
+                  <label resource-bundle="com/oilman/adlxb/desktop/guiString" key="send"/>
                   <margin top="2" left="10" bottom="2" right="10"/>
                   <text resource-bundle="com/oilman/adlxb/desktop/guiString" key="send"/>
-                  <toolTipText value="PO出去吧！"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiString" key="just_post_it"/>
                 </properties>
               </component>
               <component id="5aa13" class="javax.swing.JComboBox" binding="kaomojiComboBox" custom-create="true">
@@ -167,7 +167,7 @@
                   <enabled value="false"/>
                   <margin top="3" left="3" bottom="3" right="3"/>
                   <minimumSize width="20" height="22"/>
-                  <text value="这里会显示串"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/guiString" key="thread_goes_here"/>
                   <toolTipText value="这是串"/>
                   <visible value="true"/>
                 </properties>

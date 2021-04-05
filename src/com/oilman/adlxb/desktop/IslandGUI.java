@@ -1,6 +1,7 @@
 package com.oilman.adlxb.desktop;
 
 import com.oilman.adlxb.core.IslandThread;
+import com.oilman.adlxb.core.IslandValueHolder;
 
 import javax.swing.*;
 import javax.swing.event.PopupMenuEvent;
@@ -30,7 +31,7 @@ public class IslandGUI {
     private JPanel jPanel2;
     private JPanel rootJPanel;
     private JTextPane outputTextPane;
-    private JComboBox kaomojiComboBox;
+    private JComboBox<String> kaomojiComboBox;
     private JTextPane userInputTextPane;
     private JTextPane HintTextPane;
     private JScrollPane outputScrollPane;
@@ -63,7 +64,11 @@ public class IslandGUI {
 
     private void createUIComponents() {
         sendButton = new JButton();
-        kaomojiComboBox = new JComboBox();
+        kaomojiComboBox = new JComboBox<String>();
+        for (String kaomoji: IslandValueHolder.getKaomoji()){
+            kaomojiComboBox.addItem(kaomoji);
+        }
+
         kaomojiComboBox.addPopupMenuListener(new PopupMenuListener() {
             boolean isCanceled = false;
 
