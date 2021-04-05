@@ -2,7 +2,6 @@ package com.oilman.adlxb.desktop;
 
 import com.oilman.adlxb.core.IslandThread;
 import com.oilman.adlxb.core.IslandValueHolder;
-import sun.awt.SunToolkit;
 
 import javax.swing.*;
 import javax.swing.event.PopupMenuEvent;
@@ -12,11 +11,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 import java.util.Objects;
-import java.util.Properties;
 import java.util.ResourceBundle;
 
 import static com.oilman.adlxb.desktop.GuiVariables.toLog;
-import static com.oilman.adlxb.desktop.IslandGuiUtils.*;
+import static com.oilman.adlxb.desktop.IslandGuiUtils.getFont;
+import static com.oilman.adlxb.desktop.IslandGuiUtils.setDefaultFontTo;
 
 /**
  * The desktop GUI version of this program.
@@ -26,6 +25,7 @@ import static com.oilman.adlxb.desktop.IslandGuiUtils.*;
  * @since 2.1.0
  */
 public class IslandGUI {
+    static ResourceBundle bundle;
     private JButton sendButton;
     private JPanel userInputJPanel;
     private JPanel rootJPanel;
@@ -36,8 +36,6 @@ public class IslandGUI {
     private JScrollPane outputScrollPane;
     private JScrollPane userInputScrollPane;
     private JSplitPane mainSplitPane;
-
-    static ResourceBundle bundle;
 
     /**
      * Main GUI for users
@@ -56,7 +54,7 @@ public class IslandGUI {
         setDefaultFontTo(getFont());
 
         Locale locale = Locale.getDefault();
-        bundle = ResourceBundle.getBundle("com.oilman.adlxb.desktop.guiString",locale);
+        bundle = ResourceBundle.getBundle("com.oilman.adlxb.desktop.guiString", locale);
 
         JFrame frame = new JFrame();
         frame.setContentPane(new IslandGUI().rootJPanel);

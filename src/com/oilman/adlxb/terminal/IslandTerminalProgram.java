@@ -43,7 +43,7 @@ public class IslandTerminalProgram {
                 System.out.print("\u001b[0m");//Reset;
                 System.out.println("创建时间：" + thisTread.getCreatedTime());
                 System.out.print("当前状态：");
-                if (thisTread.isSage()) {
+                if (thisTread.isSaged()) {
                     System.out.print("\u001b[31m");//Print red
                     System.out.println("被SAGE啦！");
                     System.out.print("\u001b[0m");//Reset
@@ -87,7 +87,7 @@ public class IslandTerminalProgram {
 
         IslandThread threadToPrint = new IslandThread(userInput);
         System.out.println(threadToPrint);
-        if (threadToPrint.isSage()) {
+        if (threadToPrint.isSaged()) {
             System.out.print("\u001b[31m");//Print red
             System.out.println(" \n Sage掉了！");
             System.out.print("\u001b[0m");//Reset

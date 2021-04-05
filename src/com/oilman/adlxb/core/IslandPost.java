@@ -58,7 +58,7 @@ public class IslandPost implements Comparable<IslandPost> {
     private final long postNumber;
     private final String cookie;
     private final String content;
-    private final Date createdTime;
+    private final Date createTime;
     private final OwnerEnum owner;
 
     /**
@@ -82,7 +82,7 @@ public class IslandPost implements Comparable<IslandPost> {
         this.postNumber = postNumber;
         this.cookie = cookie;
         this.content = content;
-        this.createdTime = createdTime;
+        this.createTime = createdTime;
         this.owner = owner;
     }
 
@@ -135,7 +135,7 @@ public class IslandPost implements Comparable<IslandPost> {
         return "No. " + postNumber +
             " | Cookie: " + cookie +
             " | Content: " + content +
-            " | Created Time: " + createdTime +
+            " | Created Time: " + createTime +
             " | Owner: " + owner.toString()
             ;
     }
@@ -154,23 +154,47 @@ public class IslandPost implements Comparable<IslandPost> {
     }
 
 
-    // Getters
+    /**
+     * Getter for the cookie.
+     *
+     * @return cookie
+     */
     public String getCookie() {
         return cookie;
     }
 
+    /**
+     * Getter for content
+     *
+     * @return content
+     */
     public String getContent() {
         return content;
     }
 
+    /**
+     * Getter for create time
+     *
+     * @return createTime
+     */
     public Date getCreatedTime() {
-        return createdTime;
+        return createTime;
     }
 
+    /**
+     * Getter for post number
+     *
+     * @return post number
+     */
     public long getPostNumber() {
         return postNumber;
     }
 
+    /**
+     * Getter for the owner
+     *
+     * @return the owner
+     */
     public OwnerEnum getOwner() {
         return owner;
     }

@@ -176,23 +176,59 @@ public class IslandThread {
             userPost.getContent();
     }
 
+    /**
+     * getter for user post
+     *
+     * @return the user post
+     * @version 3.0.0
+     * @since 3.0.0
+     */
     public IslandPost getUserPost() {
         return userPost;
     }
 
+    /**
+     * getter for responses
+     *
+     * @return the responses
+     * @version 3.0.0
+     * @since 3.0.0
+     */
     public IslandPost[] getResponses() {
         return responses;
     }
 
+    /**
+     * getter for thread condition
+     *
+     * @return the condition of this thread
+     * @version 3.0.0
+     * @see ThreadConditionEnum
+     * @since 3.0.0
+     */
     public ThreadConditionEnum getCondition() {
         return threadCondition;
     }
 
+    /**
+     * Getter for create time
+     *
+     * @return createTime of this thread
+     * @version 3.0.0
+     * @since 3.0.0
+     */
     public Date getCreatedTime() {
         return createdTime;
     }
 
-    public boolean isSage() {
+    /**
+     * Whether this thread is saged
+     *
+     * @return true if this.condition == SAGE, false otherwise.
+     * @version 3.0.0
+     * @since 1.1.0
+     */
+    public boolean isSaged() {
         return this.threadCondition == ThreadConditionEnum.SAGE;
     }
 }
