@@ -17,6 +17,7 @@ import static com.oilman.adlxb.core.IslandUtils.getARandomKaomoji;
  * You MUST NOT use Chinese or Japanese for variables names.
  *
  * @author oilman
+ * @version 2.0.0
  * @see IslandUtils
  * @see IslandValueHolder
  * @since 2.0.0

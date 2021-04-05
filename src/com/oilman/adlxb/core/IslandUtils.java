@@ -12,6 +12,7 @@ import static com.oilman.adlxb.core.CoreVariables.*;
  *
  * @author Oilman
  * @author Sod-Momas
+ * @version 2.0.0
  * @since 1.0.1
  */
 public class IslandUtils {
@@ -154,6 +155,7 @@ public class IslandUtils {
 
     /**
      * @return a random Kaomoji in islandKaomoji array
+     * @version 2.0.0
      * @since 2.0.0
      */
     public static String getARandomKaomoji() {

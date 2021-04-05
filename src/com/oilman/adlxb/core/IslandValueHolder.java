@@ -1,18 +1,27 @@
 package com.oilman.adlxb.core;
 
+/**
+ * The class helps other packages import Constants class and Variables class.
+ *
+ * @version 3.0.0
+ * @since 3.0.0
+ */
 public class IslandValueHolder {
-    public static void setToLog(boolean b){
-        CoreVariables.toLog=b;
+    public static void setToLog(boolean b) {
+        CoreVariables.toLog = b;
     }
-    public static String[] getKaomoji(){
+
+    public static String[] getKaomoji() {
         return CoreConstants.islandKaomoji;
     }
 }
+
 /**
  * Most of the constants of this program should go here
  *
  * @author Oilman
  * @author Sod-Momas
+ * @version 3.0.0
  * @since 1.0.1
  */
 class CoreConstants {
@@ -55,10 +64,14 @@ class CoreConstants {
     private void IslandSettings() {
     }//private constructor
 }
+
 /**
  * A class that stores values that will change while using the program
  * This class should be able to change and don't have final
  * If you want to have a constance that is not visible for users, you should go to IslandValueHolder class
+ *
+ * @version 3.0.0
+ * @since 1.0.2
  */
 class CoreVariables {
     // do the program needs to log?

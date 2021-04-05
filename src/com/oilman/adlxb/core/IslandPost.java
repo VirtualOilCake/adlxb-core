@@ -10,6 +10,7 @@ import static com.oilman.adlxb.core.OwnerEnum.*;
  * Possible owners of a post
  *
  * @author oilman
+ * @version 2.0.0
  * @since 2.0.0
  */
 enum OwnerEnum {
@@ -20,6 +21,7 @@ enum OwnerEnum {
  * Bot post
  *
  * @author oilman
+ * @version 2.0.0
  * @see IslandPost
  * @since 2.0.0
  */
@@ -33,6 +35,7 @@ class BotPost extends IslandPost {
  * User post
  *
  * @author oilman
+ * @version 2.0.0
  * @see IslandPost
  * @since 2.0.0
  */
@@ -47,6 +50,7 @@ class UserPost extends IslandPost {
  * Contents information about the cookie, actual contents, etc.
  *
  * @author oilman
+ * @version 2.0.0
  * @since 2.0.0
  */
 public class IslandPost implements Comparable<IslandPost> {
