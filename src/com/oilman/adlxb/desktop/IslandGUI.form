@@ -36,7 +36,7 @@
                   <focusTraversalPolicyProvider value="false"/>
                   <label value="发送"/>
                   <margin top="2" left="10" bottom="2" right="10"/>
-                  <text value="发送"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/guiString" key="send"/>
                   <toolTipText value="PO出去吧！"/>
                 </properties>
               </component>
@@ -117,7 +117,7 @@
                     <item value="⊂彡))∀`)"/>
                     <item value="(´∀((ミつ"/>
                   </model>
-                  <toolTipText value="颜文字"/>
+                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiString" key="kaomoji"/>
                 </properties>
               </component>
               <scrollpane id="b32b9" binding="userInputScrollPane">
@@ -146,7 +146,7 @@
                   <enabled value="true"/>
                   <focusable value="false"/>
                   <opaque value="false"/>
-                  <text value="要PO些啥呢？"/>
+                  <text resource-bundle="com/oilman/adlxb/desktop/guiString" key="what_to_post"/>
                 </properties>
               </component>
             </children>

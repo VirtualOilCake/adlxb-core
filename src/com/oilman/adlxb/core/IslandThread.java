@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-import static com.oilman.adlxb.core.CoreConstants.*;
+import static com.oilman.adlxb.core.CoreConstants.chanceOfSage;
+import static com.oilman.adlxb.core.CoreConstants.to_sage;
 import static com.oilman.adlxb.core.CoreVariables.toLog;
 
 
@@ -98,7 +99,7 @@ public class IslandThread {
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder();
-        output.append("==== Island Thread ====\n");
+        //output.append("==== Island Thread ====\n");
         output.append("--- User Post --- \n");
         output.append(userPost.getCookie()).append(": ").append(userPost.getContent());
         output.append("\n--- Responses --- ");
@@ -111,8 +112,7 @@ public class IslandThread {
         }
         output.append("\nThread Condition: ").append(threadCondition);
         output.append("\nCreated Time: ").append(createdTime);
-
-        output.append("\n====IslandThread====");
+        //output.append("\n====IslandThread====");
         return output.toString();
     }
 

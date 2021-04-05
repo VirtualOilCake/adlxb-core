@@ -152,7 +152,6 @@ public class IslandUtils {
         return possibleResponses;
     }
 
-
     /**
      * @return a random Kaomoji in islandKaomoji array
      * @since 2.0.0
