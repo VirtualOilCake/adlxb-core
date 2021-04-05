@@ -11,6 +11,7 @@ import static com.oilman.adlxb.core.CoreVariables.toLog;
 
 /**
  * @author oilman
+ * @version 2.0.0
  * @since 2.0.0
  */
 enum ThreadConditionEnum {
@@ -21,6 +22,7 @@ enum ThreadConditionEnum {
  * This class represent a thread on A Island
  *
  * @author oilman
+ * @version 3.0.0
  * @see IslandPost
  * @since 2.0.0
  */
@@ -79,6 +81,13 @@ public class IslandThread {
         this.createdTime = new Date();
     }
 
+    /**
+     * The constructor for testing purpose.
+     * Should NOT be used for other purposes.
+     *
+     * @version 1.0.0
+     * @since 0.1.0
+     */
     // Only for test
     public IslandThread() {
         this.userPost = new UserPost("TEST");
@@ -95,6 +104,8 @@ public class IslandThread {
      * The more user friendly version of String that describe this object.
      *
      * @return a String that describe this object
+     * @version 3.0.0
+     * @since 1.1.0
      */
     @Override
     public String toString() {
@@ -116,6 +127,13 @@ public class IslandThread {
         return output.toString();
     }
 
+    /**
+     * get a more technical description of this class in String.
+     *
+     * @return a String that describe this class
+     * @version 2.0.0
+     * @since 1.1.0
+     */
     public String valueOf() {
         return "IslandThread{" +
             "userPost=" + userPost +
@@ -123,6 +141,18 @@ public class IslandThread {
             ", threadCondition=" + threadCondition +
             ", createdTime=" + createdTime +
             '}';
+    }
+
+    public String responsesToString() {
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < responses.length; i++) {
+            IslandPost post = responses[i];
+            output.append("\n").append("[").append(i).append("] cookie: ")
+                .append(post.getCookie())
+                .append(" | No.").append(post.getPostNumber()).append("\n")
+                .append(post.getContent());
+        }
+        return output.toString();
     }
 
     public boolean isSage() {

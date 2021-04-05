@@ -65,8 +65,8 @@ public class IslandTerminalProgram {
     }
 
     private static void printALotOfNewLines() {
-        for (int i = 0; i < 20; i++) {
-            System.out.println("\n");
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
         }
     }
 }
