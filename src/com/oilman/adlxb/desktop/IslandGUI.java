@@ -10,11 +10,13 @@ import javax.swing.event.PopupMenuListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Locale;
 import java.util.Objects;
+import java.util.Properties;
+import java.util.ResourceBundle;
 
 import static com.oilman.adlxb.desktop.GuiVariables.toLog;
-import static com.oilman.adlxb.desktop.IslandGuiUtils.getFont;
-import static com.oilman.adlxb.desktop.IslandGuiUtils.setDefaultFontTo;
+import static com.oilman.adlxb.desktop.IslandGuiUtils.*;
 
 /**
  * The desktop GUI version of this program.
@@ -24,12 +26,8 @@ import static com.oilman.adlxb.desktop.IslandGuiUtils.setDefaultFontTo;
  * @since 2.1.0
  */
 public class IslandGUI {
-    static Font normalFont;
-    static Font boldFont;
-    static int normalFontSize = 12;
-    static int boldFontSize = 11;
     private JButton sendButton;
-    private JPanel jPanel2;
+    private JPanel userInputJPanel;
     private JPanel rootJPanel;
     private JTextPane outputTextPane;
     private JComboBox<String> kaomojiComboBox;
@@ -55,18 +53,19 @@ public class IslandGUI {
         }
         setDefaultFontTo(getFont());
 
-        JFrame frame = new JFrame("A岛离线版");
+        JFrame frame = new JFrame();
         frame.setContentPane(new IslandGUI().rootJPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
     }
 
-
     private void createUIComponents() {
-        SunToolkit.setAAFontSettingsCondition(true);
+        Locale locale = Locale.getDefault();
+        ResourceBundle bundle = ResourceBundle.getBundle("com.oilman.adlxb.desktop.guiString",locale);
+
         sendButton = new JButton();
-        kaomojiComboBox = new JComboBox<>();
+        kaomojiComboBox = new JComboBox<String>();
         userInputTextPane = new JTextPane();
         outputTextPane = new JTextPane();
         userInputTextPane.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 12));
@@ -96,6 +95,7 @@ public class IslandGUI {
                     isCanceled = false;
                 }
             }
+
             @Override
             public void popupMenuCanceled(PopupMenuEvent e) {
                 isCanceled = true;
@@ -107,7 +107,7 @@ public class IslandGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (userInputTextPane.getText().isBlank()) {
-                    outputTextPane.setText("输入点东西吧");
+                    outputTextPane.setText(bundle.getString("input_something"));
                 } else {
                     IslandThread thisThread = new IslandThread(userInputTextPane.getText());
                     outputTextPane.setText(thisThread.toString());

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiString_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGuiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGuiUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiString.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/guiString.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +88,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="221" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="411" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/oilman/adlxb/core" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />

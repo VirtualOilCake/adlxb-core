@@ -3,8 +3,9 @@ package com.oilman.adlxb.desktop;
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
-import java.util.Enumeration;
-import java.util.Locale;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
 
 import static com.oilman.adlxb.desktop.GuiVariables.toLog;
 
@@ -129,7 +130,7 @@ public class IslandGuiUtils {
 
             if (toLog) System.out.println("You are not running Windows. Using the SANS_SERIF font.");
         }
-        if (toLog) System.out.println("Final font is: "+outputFont.getFamily());
+        if (toLog) System.out.println("Final font is: " + outputFont.getFamily());
         return outputFont;
     }
 
