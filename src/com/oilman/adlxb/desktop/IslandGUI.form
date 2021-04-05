@@ -47,7 +47,7 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="e1c2c" class="javax.swing.JTextPane" binding="userInputTextPane">
+                  <component id="e1c2c" class="javax.swing.JTextPane" binding="userInputTextPane" custom-create="true">
                     <constraints/>
                     <properties>
                       <opaque value="true"/>
@@ -86,7 +86,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="bf7ea" class="javax.swing.JTextPane" binding="outputTextPane">
+              <component id="bf7ea" class="javax.swing.JTextPane" binding="outputTextPane" custom-create="true">
                 <constraints/>
                 <properties>
                   <editable value="false"/>
