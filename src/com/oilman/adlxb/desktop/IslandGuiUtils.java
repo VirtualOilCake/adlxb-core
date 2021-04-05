@@ -3,9 +3,8 @@ package com.oilman.adlxb.desktop;
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 import java.awt.*;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Locale;
 
 import static com.oilman.adlxb.desktop.GuiVariables.toLog;
 
@@ -14,8 +13,8 @@ import static com.oilman.adlxb.desktop.GuiVariables.toLog;
  * This is the invisible part for the GUI
  *
  * @author Oilman
- * @since 2.1.0
  * @version 3.0.0
+ * @since 2.1.0
  */
 public class IslandGuiUtils {
     /**
@@ -23,6 +22,7 @@ public class IslandGuiUtils {
      *
      * @param fontName the font you want to find
      * @return true if the given font exist, false otherwise.
+     * @version 2.1.0
      * @since 2.1.0
      */
     public static boolean hasFont(String fontName) {
@@ -47,6 +47,8 @@ public class IslandGuiUtils {
      * Source:https://blog.csdn.net/chenxuejiakaren/article/details/7637731
      *
      * @param font given font
+     * @version 3.0.0
+     * @since 3.0.0
      */
     public static void setDefaultFontTo(Font font) {
         FontUIResource fontRes = new FontUIResource(font);
@@ -67,6 +69,7 @@ public class IslandGuiUtils {
      * Source: http://www.jguru.com/faq/view.jsp?EID=340519
      *
      * @param font given font
+     * @version 2.1.0
      * @since 2.1.0
      */
     public static void setDefaultFontToOld(Font font) {
@@ -109,6 +112,7 @@ public class IslandGuiUtils {
      *
      * @param fontSize the font size
      * @return a sans serif font
+     * @version 2.1.0
      * @since 2.1.0
      */
     public static Font getFont(int fontSize) {
