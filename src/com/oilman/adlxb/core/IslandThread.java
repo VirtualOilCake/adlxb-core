@@ -100,18 +100,18 @@ public class IslandThread {
     public String toString() {
         StringBuilder output = new StringBuilder();
         //output.append("==== Island Thread ====\n");
-        output.append("--- User Post --- \n");
+        output.append("Thread Condition: ").append(threadCondition);
+        output.append("\nCreated Time: ").append(createdTime);
+        output.append("\n--- User Post --- \n");
         output.append(userPost.getCookie()).append(": ").append(userPost.getContent());
         output.append("\n--- Responses --- ");
         for (int i = 0; i < responses.length; i++) {
             IslandPost post = responses[i];
-            output.append("\n").append("<").append(i).append("> cookie: ")
+            output.append("\n").append("[").append(i).append("] cookie: ")
                 .append(post.getCookie())
                 .append(" | No.").append(post.getPostNumber()).append("\n")
                 .append(post.getContent());
         }
-        output.append("\nThread Condition: ").append(threadCondition);
-        output.append("\nCreated Time: ").append(createdTime);
         //output.append("\n====IslandThread====");
         return output.toString();
     }
