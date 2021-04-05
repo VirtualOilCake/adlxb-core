@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a6d9d50a-9eb8-4ffe-937d-a62e6fd5f60a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/core/IslandThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/IslandTerminalProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/terminal/IslandTerminalProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oilman/adlxb/desktop/IslandGUI.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
