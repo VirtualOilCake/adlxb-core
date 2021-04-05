@@ -63,6 +63,7 @@ public class IslandGUI {
 
 
     private void createUIComponents() {
+        awt.useSystemAAFontSettings;
         sendButton = new JButton();
         kaomojiComboBox = new JComboBox<String>();
         for (String kaomoji: IslandValueHolder.getKaomoji()){
