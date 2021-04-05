@@ -118,7 +118,7 @@ public class IslandThread {
         output.append("\n--- Responses --- ");
         for (int i = 0; i < responses.length; i++) {
             IslandPost post = responses[i];
-            output.append("\n").append("[").append(i).append("] cookie: ")
+            output.append("\n").append("[").append(i).append("] Cookie: ")
                 .append(post.getCookie())
                 .append(" | No.").append(post.getPostNumber()).append("\n")
                 .append(post.getContent());
@@ -155,22 +155,22 @@ public class IslandThread {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < responses.length; i++) {
             IslandPost post = responses[i];
-            if (i!=0){
+            if (i != 0) {
                 output.append("\n");//The first one will have no new line
             }
-            output.append("[").append(i).append("] cookie: ")
+            output.append("[").append(i).append("] Cookie: ")
                 .append(post.getCookie())
                 .append(" | No.").append(post.getPostNumber()).append("\n")
                 .append(post.getContent());
         }
-        if (responses.length==0){
+        if (responses.length == 0) {
             output.append("There is no response...");
         }
         return output.toString();
     }
 
     public String selfPostToString() {
-        return "cookie: " +
+        return "Cookie: " +
             userPost.getCookie() +
             " | No." + userPost.getPostNumber() + "\n" +
             userPost.getContent();
@@ -184,7 +184,7 @@ public class IslandThread {
         return responses;
     }
 
-    public ThreadConditionEnum getThreadCondition() {
+    public ThreadConditionEnum getCondition() {
         return threadCondition;
     }
 
