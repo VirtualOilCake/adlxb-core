@@ -1,7 +1,4 @@
-package com.oilman.adlxb.core;
-
-import java.awt.*;
-import java.util.Scanner;
+package com.oilman.adlxb.terminal;
 
 public class Main {
     public static void main(String[] args) {

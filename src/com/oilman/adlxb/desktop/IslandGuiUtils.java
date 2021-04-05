@@ -90,10 +90,10 @@ public class IslandGuiUtils {
             if (toLog) {
                 System.out.println("You are running Windows. Trying to use Microsoft YaHei.");
             }
-            if (hasFont("Microsoft YaHei")){
+            if (hasFont("Microsoft YaHei")) {
                 return new Font("Microsoft YaHei", Font.PLAIN, fontSize);
-            }else {
-                if (toLog){
+            } else {
+                if (toLog) {
                     System.out.println("You do not have Microsoft YaHei installed on your system!");
                 }
             }

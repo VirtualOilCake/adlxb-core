@@ -10,8 +10,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
 
-import static com.oilman.adlxb.desktop.IslandGuiUtils.*;
 import static com.oilman.adlxb.core.IslandSettings.toLog;
+import static com.oilman.adlxb.desktop.IslandGuiUtils.getFont;
+import static com.oilman.adlxb.desktop.IslandGuiUtils.setDefaultFontTo;
 
 /**
  * The desktop GUI version of this program.
@@ -21,6 +22,10 @@ import static com.oilman.adlxb.core.IslandSettings.toLog;
  * @since 2.1.0
  */
 public class IslandGUI {
+    static Font normalFont;
+    static Font boldFont;
+    static int normalFontSize = 12;
+    static int boldFontSize = 11;
     private JButton sendButton;
     private JPanel jPanel2;
     private JPanel rootJPanel;
@@ -31,11 +36,6 @@ public class IslandGUI {
     private JScrollPane outputScrollPane;
     private JScrollPane userInputScrollPane;
     private JSplitPane mainSplitPane;
-
-    static Font normalFont;
-    static Font boldFont;
-    static int normalFontSize = 12;
-    static int boldFontSize = 11;
 
     /**
      * Main GUI for users
@@ -48,7 +48,7 @@ public class IslandGUI {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());// Current system style
         } catch (Exception e) {
             System.out.println(
-                    "Your system dose not support UIManager.getSystemLookAndFeelClassName()");
+                "Your system dose not support UIManager.getSystemLookAndFeelClassName()");
             e.printStackTrace();
         }
         setDefaultFontTo(getFont());
@@ -65,28 +65,29 @@ public class IslandGUI {
         sendButton = new JButton();
         kaomojiComboBox = new JComboBox();
         kaomojiComboBox.addPopupMenuListener(new PopupMenuListener() {
-            boolean isCanceled=false;
+            boolean isCanceled = false;
+
             @Override
             public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
-                isCanceled=false;
+                isCanceled = false;
             }
 
             @Override
             public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
-                if (!isCanceled){
+                if (!isCanceled) {
                     if (toLog) {
                         System.out.println("Selected: " + Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
                     }
                     userInputTextPane.setText(userInputTextPane.getText() +
-                            Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
-                }else {
-                    isCanceled=false;
+                        Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
+                } else {
+                    isCanceled = false;
                 }
             }
 
             @Override
             public void popupMenuCanceled(PopupMenuEvent e) {
-                isCanceled=true;
+                isCanceled = true;
             }
         });
 

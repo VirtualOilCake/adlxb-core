@@ -1,4 +1,6 @@
-package com.oilman.adlxb.core;
+package com.oilman.adlxb.terminal;
+
+import com.oilman.adlxb.core.IslandThread;
 
 import java.util.Scanner;
 

@@ -63,7 +63,7 @@ public class IslandThread {
                     }
                     break;
                 }
-            }else {
+            } else {
                 responsesList.add(new BotPost(responsesContent));
             }
 
@@ -82,9 +82,9 @@ public class IslandThread {
     public IslandThread() {
         this.userPost = new UserPost("TEST");
         this.responses = new IslandPost[]{
-                new BotPost("TEST RESPONSE 1"),
-                new BotPost("TEST RESPONSE 2"),
-                new BotPost("TEST RESPONSE 3")
+            new BotPost("TEST RESPONSE 1"),
+            new BotPost("TEST RESPONSE 2"),
+            new BotPost("TEST RESPONSE 3")
         };
         this.threadCondition = ThreadConditionEnum.TEST;
         this.createdTime = new Date();
@@ -105,9 +105,9 @@ public class IslandThread {
         for (int i = 0; i < responses.length; i++) {
             IslandPost post = responses[i];
             output.append("\n").append("<").append(i).append("> cookie: ")
-                    .append(post.getCookie())
-                    .append(" | No.").append(post.getPostNumber()).append("\n")
-                    .append(post.getContent());
+                .append(post.getCookie())
+                .append(" | No.").append(post.getPostNumber()).append("\n")
+                .append(post.getContent());
         }
         output.append("\nThread Condition: ").append(threadCondition);
         output.append("\nCreated Time: ").append(createdTime);
@@ -118,11 +118,11 @@ public class IslandThread {
 
     public String valueOf() {
         return "IslandThread{" +
-                "userPost=" + userPost +
-                ", responses=" + Arrays.toString(responses) +
-                ", threadCondition=" + threadCondition +
-                ", createdTime=" + createdTime +
-                '}';
+            "userPost=" + userPost +
+            ", responses=" + Arrays.toString(responses) +
+            ", threadCondition=" + threadCondition +
+            ", createdTime=" + createdTime +
+            '}';
     }
 
     public boolean isSage() {

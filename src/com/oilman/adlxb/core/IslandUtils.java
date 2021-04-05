@@ -55,7 +55,7 @@ public class IslandUtils {
      */
     private static int getResponseNumber() {
         return IslandSettings.baseNumberForReplies +
-                IslandUtils.random().nextInt(IslandSettings.numberForRepliesRange);
+            IslandUtils.random().nextInt(IslandSettings.numberForRepliesRange);
     }
 
     /**
@@ -65,12 +65,12 @@ public class IslandUtils {
      * @return an array of String of responses
      */
     public static String[] getResponse(String userInput, String userCookie) {
-        if (toLog){
+        if (toLog) {
             System.out.println("getResponse() is being called");
         }
         String[] responses = new String[getResponseNumber()];
         ArrayList<IslandRulesEnum> rulesSatisfied =
-                getAllSatisfiedRules(formatInputString(userInput)); // List for all satisfied rules
+            getAllSatisfiedRules(formatInputString(userInput)); // List for all satisfied rules
         ArrayList<String> possibleResponses = getAllPossibleResponses(rulesSatisfied);
         if (toLog) {
             System.out.println("All Possible responses: " + possibleResponses);
@@ -89,22 +89,22 @@ public class IslandUtils {
         return responses;
     }
 
-    private static ArrayList<IslandRulesEnum> getAllSatisfiedRules(String formattedUserInput){
+    private static ArrayList<IslandRulesEnum> getAllSatisfiedRules(String formattedUserInput) {
         ArrayList<IslandRulesEnum> rulesSatisfied = new ArrayList<>();
         for (int currentRuleIndex = 0; currentRuleIndex < IslandRulesEnum.values().length; currentRuleIndex++) {
             for (String currentKeyword : IslandRulesEnum.values()[currentRuleIndex].getKeywords()) {
                 // for and logic
-                if (currentKeyword.startsWith("&&,")){
+                if (currentKeyword.startsWith("&&,")) {
                     String[] andLogicKeywords = currentKeyword.split(",");
                     boolean hasAllKeys = true;
                     for (int i = 1, andLogicKeywordsLength = andLogicKeywords.length; i < andLogicKeywordsLength; i++) {
                         String key = andLogicKeywords[i];
-                        if (!formattedUserInput.contains(key)){
-                            hasAllKeys=false;
+                        if (!formattedUserInput.contains(key)) {
+                            hasAllKeys = false;
                             break;
                         }
                     }
-                    if (hasAllKeys){
+                    if (hasAllKeys) {
                         rulesSatisfied.add(IslandRulesEnum.values()[currentRuleIndex]);
                         break;
                     }
@@ -119,7 +119,7 @@ public class IslandUtils {
         return rulesSatisfied;
     }
 
-    private static ArrayList<String> getAllPossibleResponses(ArrayList<IslandRulesEnum> satisfiedRules){
+    private static ArrayList<String> getAllPossibleResponses(ArrayList<IslandRulesEnum> satisfiedRules) {
         ArrayList<String> possibleResponses = new ArrayList<>();
         for (IslandRulesEnum currentRule : satisfiedRules) {
             // Add all possible responses to possibleResponses list
@@ -131,7 +131,7 @@ public class IslandUtils {
                     // print state
                     if (toLog)
                         System.out.println("response {" + responseToRepeat +
-                                "} will be repeated for " + timesToRepeat + " times.");
+                            "} will be repeated for " + timesToRepeat + " times.");
                     for (int i = 0; i < timesToRepeat; i++) {
                         possibleResponses.add(responseToRepeat);
                     }
@@ -139,12 +139,11 @@ public class IslandUtils {
                 }
                 // The normal case
                 else {
-                    if (!currentRule.getResponses()[indexInRule].isBlank()){
+                    if (!currentRule.getResponses()[indexInRule].isBlank()) {
                         possibleResponses.add(currentRule.getResponses()[indexInRule]);
-                    }
-                    else {
-                        if (toLog){
-                            System.err.println("Waring: There is at least one blank response in: "+currentRule);
+                    } else {
+                        if (toLog) {
+                            System.err.println("Waring: There is at least one blank response in: " + currentRule);
                         }
                     }
                 }

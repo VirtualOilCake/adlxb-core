@@ -7,5 +7,5 @@ insert_final_newline = false
 max_line_length = 120
 tab_width = 4
 
-[{*.har,*.json}]
+[{*.har, *.json}]
 indent_size = 2

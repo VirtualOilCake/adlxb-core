@@ -142,7 +142,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.oilman.adlxb.core.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.oilman.adlxb.terminal.Main" />
       <module name="adlxb-core" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />

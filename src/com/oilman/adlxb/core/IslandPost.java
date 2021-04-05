@@ -50,13 +50,12 @@ class UserPost extends IslandPost {
  * @since 2.0.0
  */
 public class IslandPost implements Comparable<IslandPost> {
+    public static long basePostNumber = 35741657 + IslandUtils.random().nextInt(postNumberIncreaseSpeed);
     private final long postNumber;
     private final String cookie;
     private final String content;
     private final Date createdTime;
     private final OwnerEnum owner;
-
-    public static long basePostNumber = 35741657 + IslandUtils.random().nextInt(postNumberIncreaseSpeed);
 
     /**
      * the most complex constructor
@@ -69,7 +68,7 @@ public class IslandPost implements Comparable<IslandPost> {
      * @throws IllegalArgumentException when the cookie or content is null or blank
      */
     public IslandPost(long postNumber, String cookie, String content, Date createdTime, OwnerEnum owner)
-            throws IllegalArgumentException {
+        throws IllegalArgumentException {
         if (content == null || cookie == null) {
             throw new IllegalArgumentException("Error when creating the Post: content or cookie is null");
         }
@@ -130,11 +129,11 @@ public class IslandPost implements Comparable<IslandPost> {
     @Override
     public String toString() {
         return "No. " + postNumber +
-                " | Cookie: " + cookie +
-                " | Content: " + content +
-                " | Created Time: " + createdTime +
-                " | Owner: " + owner.toString()
-                ;
+            " | Cookie: " + cookie +
+            " | Content: " + content +
+            " | Created Time: " + createdTime +
+            " | Owner: " + owner.toString()
+            ;
     }
 
     /**
