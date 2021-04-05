@@ -1,7 +1,9 @@
 package com.oilman.adlxb.desktop;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
 import java.awt.*;
+import java.util.Enumeration;
 import java.util.Locale;
 
 import static com.oilman.adlxb.desktop.GuiVariables.toLog;
@@ -36,6 +38,27 @@ public class IslandGuiUtils {
         return false;
     }
 
+
+    /**
+     * Set the default font to all parts
+     * <p>
+     * Source:https://blog.csdn.net/chenxuejiakaren/article/details/7637731
+     *
+     * @param font given font
+     */
+    public static void setDefaultFontTo(Font font) {
+        FontUIResource fontRes = new FontUIResource(font);
+        for (Enumeration<Object> keys = UIManager.getDefaults().keys();
+             keys.hasMoreElements(); ) {
+            Object key = keys.nextElement();
+            Object value = UIManager.get(key);
+            if (value instanceof FontUIResource) {
+                UIManager.put(key, fontRes);
+            }
+        }
+    }
+
+
     /**
      * Set the default font to all parts
      * <p>
@@ -44,7 +67,7 @@ public class IslandGuiUtils {
      * @param font given font
      * @since 2.1.0
      */
-    public static void setDefaultFontTo(Font font) {
+    public static void setDefaultFontToOld(Font font) {
         UIManager.put("Button.font", font);
         UIManager.put("ToggleButton.font", font);
         UIManager.put("RadioButton.font", font);
@@ -87,23 +110,27 @@ public class IslandGuiUtils {
      * @since 2.1.0
      */
     public static Font getFont(int fontSize) {
+        Font outputFont;
         if (System.getProperty("os.name").toLowerCase(Locale.ROOT).startsWith("windows")) {
-            if (toLog) {
-                System.out.println("You are running Windows. Trying to use Microsoft YaHei.");
-            }
+
+            if (toLog) System.out.println("You are running Windows. Trying to use Microsoft YaHei.");
+
             if (hasFont("Microsoft YaHei")) {
-                return new Font("Microsoft YaHei", Font.PLAIN, fontSize);
+                outputFont = new Font("Microsoft YaHei", Font.PLAIN, fontSize);
             } else {
-                if (toLog) {
-                    System.out.println("You do not have Microsoft YaHei installed on your system!");
-                }
+                outputFont = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
+
+                if (toLog) System.out.println("You do not have Microsoft YaHei installed on your system!");
+
             }
         } else {
-            if (toLog) {
-                System.out.println("You are not running Windows. Using the SANS_SERIF font.");
-            }
+
+            outputFont = new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
+
+            if (toLog) System.out.println("You are not running Windows. Using the SANS_SERIF font.");
         }
-        return new Font(Font.SANS_SERIF, Font.BOLD, fontSize);
+        if (toLog) System.out.println("Final font is: "+outputFont.getFamily());
+        return outputFont;
     }
 
     /**

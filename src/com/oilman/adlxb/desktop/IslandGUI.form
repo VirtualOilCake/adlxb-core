@@ -19,7 +19,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="cd6e1" binding="jPanel2" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="cd6e1" binding="jPanel2" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <splitpane position="left"/>
@@ -38,86 +38,6 @@
                   <margin top="2" left="10" bottom="2" right="10"/>
                   <text resource-bundle="com/oilman/adlxb/desktop/guiString" key="send"/>
                   <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiString" key="just_post_it"/>
-                </properties>
-              </component>
-              <component id="5aa13" class="javax.swing.JComboBox" binding="kaomojiComboBox" custom-create="true">
-                <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="( ﾟ∀。)"/>
-                    <item value="|∀ﾟ"/>
-                    <item value="(´ﾟДﾟ`)"/>
-                    <item value="(;´Д`)"/>
-                    <item value="(`･ω･)"/>
-                    <item value="(=ﾟωﾟ)="/>
-                    <item value="| ω・´)"/>
-                    <item value="|-` )"/>
-                    <item value="|д` )"/>
-                    <item value="|ー` )"/>
-                    <item value="|∀` )"/>
-                    <item value="(つд⊂)"/>
-                    <item value="(ﾟДﾟ≡ﾟДﾟ)"/>
-                    <item value="(^o^)ﾉ"/>
-                    <item value="(|||ﾟДﾟ)"/>
-                    <item value="( ﾟ∀ﾟ)"/>
-                    <item value="( ´∀`)"/>
-                    <item value="(*´∀`)"/>
-                    <item value="(*ﾟ∇ﾟ)"/>
-                    <item value="(*ﾟーﾟ)"/>
-                    <item value="( ﾟ 3ﾟ)"/>
-                    <item value="( ´ー`)"/>
-                    <item value="( ﾟ 3ﾟ)"/>
-                    <item value="( ・_ゝ・)"/>
-                    <item value="(*´д`)"/>
-                    <item value="(・ー・)"/>
-                    <item value="(・∀・)"/>
-                    <item value="(ゝ∀･)"/>
-                    <item value="(&quot;∀&quot;)"/>
-                    <item value="(*ﾟ∀ﾟ*)"/>
-                    <item value="( `д´)"/>
-                    <item value="(`ε´ )"/>
-                    <item value="(`ヮ´ )"/>
-                    <item value="σ`∀´)"/>
-                    <item value="ﾟ∀ﾟ)σ"/>
-                    <item value="ﾟ ∀ﾟ)ノ"/>
-                    <item value="(ﾟдﾟ)"/>
-                    <item value="(|||ﾟдﾟ)"/>
-                    <item value="( ﾟдﾟ)"/>
-                    <item value="Σ( ﾟдﾟ)"/>
-                    <item value="( ;ﾟдﾟ)"/>
-                    <item value="( д ) ﾟ ﾟ"/>
-                    <item value="( д)"/>
-                    <item value="((( ﾟдﾟ)))"/>
-                    <item value="( ` ・´)"/>
-                    <item value="( ´д`)"/>
-                    <item value="( -д-)"/>
-                    <item value="･ﾟ( ﾉд`ﾟ)"/>
-                    <item value="( TдT)"/>
-                    <item value="ヾ(´ωﾟ`)"/>
-                    <item value="(*´ω`*)"/>
-                    <item value="(・ω・)"/>
-                    <item value="( ´・ω)"/>
-                    <item value="(´・ω・`)"/>
-                    <item value="(`・ω・´)"/>
-                    <item value="( `_っ´)"/>
-                    <item value="( ´ρ`)"/>
-                    <item value="( ﾟωﾟ)"/>
-                    <item value="(oﾟωﾟo)"/>
-                    <item value="( ^ω^)"/>
-                    <item value="ヾ(´ε`ヾ)"/>
-                    <item value="(ノﾟ∀ﾟ)ノ"/>
-                    <item value="(σﾟдﾟ)σ"/>
-                    <item value="(σﾟ∀ﾟ)σ"/>
-                    <item value="|дﾟ )"/>
-                    <item value="ﾟ(つд`ﾟ)"/>
-                    <item value="⊂彡))д`)"/>
-                    <item value="⊂彡))д´)"/>
-                    <item value="⊂彡))∀`)"/>
-                    <item value="(´∀((ミつ"/>
-                  </model>
-                  <toolTipText resource-bundle="com/oilman/adlxb/desktop/guiString" key="kaomoji"/>
                 </properties>
               </component>
               <scrollpane id="b32b9" binding="userInputScrollPane">
@@ -149,13 +69,11 @@
                   <text resource-bundle="com/oilman/adlxb/desktop/guiString" key="what_to_post"/>
                 </properties>
               </component>
-              <component id="c7fa" class="javax.swing.JLabel">
+              <component id="74215" class="javax.swing.JComboBox" binding="kaomojiComboBox" custom-create="true">
                 <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
-                <properties>
-                  <text value="( ﾟ∀。)"/>
-                </properties>
+                <properties/>
               </component>
             </children>
           </grid>

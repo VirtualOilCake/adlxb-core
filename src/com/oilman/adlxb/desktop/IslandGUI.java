@@ -14,6 +14,7 @@ import java.util.Objects;
 import static com.oilman.adlxb.desktop.GuiVariables.toLog;
 import static com.oilman.adlxb.desktop.IslandGuiUtils.getFont;
 import static com.oilman.adlxb.desktop.IslandGuiUtils.setDefaultFontTo;
+import sun.awt.SunToolkit;
 
 /**
  * The desktop GUI version of this program.
@@ -37,6 +38,7 @@ public class IslandGUI {
     private JScrollPane outputScrollPane;
     private JScrollPane userInputScrollPane;
     private JSplitPane mainSplitPane;
+    private JTextPane TextPane;
 
     /**
      * Main GUI for users
@@ -63,9 +65,11 @@ public class IslandGUI {
 
 
     private void createUIComponents() {
-        awt.useSystemAAFontSettings;
+        SunToolkit.setAAFontSettingsCondition(true);
         sendButton = new JButton();
-        kaomojiComboBox = new JComboBox<String>();
+        kaomojiComboBox = new JComboBox<>();
+        TextPane = new JTextPane();
+
         for (String kaomoji: IslandValueHolder.getKaomoji()){
             kaomojiComboBox.addItem(kaomoji);
         }
@@ -82,7 +86,7 @@ public class IslandGUI {
             public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
                 if (!isCanceled) {
                     if (toLog) {
-                        System.out.println("Selected: " + Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
+                       // System.out.println("Selected: " + Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
                     }
                     userInputTextPane.setText(userInputTextPane.getText() +
                         Objects.requireNonNull(kaomojiComboBox.getSelectedItem()).toString());
